@@ -1,11 +1,11 @@
-/data/
+# /data/
 /myenv/
 /env/
 .env
 __pycache__/
 *.pyc
 # Ignore data directory
-data/
+# data/
 session.session
 
 *.session
