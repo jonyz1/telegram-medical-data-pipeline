@@ -6,3 +6,10 @@ __pycache__/
 *.pyc
 # Ignore data directory
 data/
+session.session
+
+*.session
+
+logs/*
+
+myenv/
