@@ -13,3 +13,10 @@ session.session
 logs/*
 
 myenv/
+
+
+
+pycache/ 
+*.pyc 
+dbt/target/ 
+dbt/dbt_packages/
