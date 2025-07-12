@@ -1,0 +1,44 @@
+name: 'telegram_data_warehouse'
+version: '1.0.0'
+config-version: 2
+
+profile: 'telegram_data_warehouse'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  telegram_data_warehouse:
+    staging:
+      +schema: staging
+      +materialized: view
+    marts:
+      +schema: marts
+      +materialized: table
+      dim_channels:
+        +tests:
+          - unique:
+              column_name: channel_id
+          - not_null:
+              column_name: channel_id
+      dim_dates:
+        +tests:
+          - unique:
+              column_name: date_id
+          - not_null:
+              column_name: date_id
+      fct_messages:
+        +tests:
+          - unique:
+              column_name: message_key
+          - not_null:
+              column_name: message_key
