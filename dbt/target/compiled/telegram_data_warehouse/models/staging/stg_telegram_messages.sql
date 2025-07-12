@@ -1,4 +1,4 @@
--- {{ config(materialized='view', schema='staging') }}
+-- 
 
 -- -- Staging model to clean and extract fields from raw JSON data
 -- SELECT
@@ -18,7 +18,7 @@
 
 
 
-{{ config(materialized='view', schema='staging') }}
+
 
 -- Staging model to clean and extract fields from raw JSON data
 WITH numbered_messages AS (
