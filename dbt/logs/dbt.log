@@ -1,0 +1,2614 @@
+[0m20:44:29.572362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233D11625D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233D11610D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233D1161070>]}
+
+
+============================== 20:44:29.577038 | 79f9a288-6929-4566-b107-672475f38e81 ==============================
+[0m20:44:29.577038 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:44:29.577038 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:44:29.723655 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "telegram_data_warehouse", target "dev" invalid: '5432' is not of type 'integer'
+[0m20:44:29.726547 [debug] [MainThread]: Command `dbt run` failed at 20:44:29.726547 after 0.33 seconds
+[0m20:44:29.726547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233D11CA720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233D169C350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233D181D250>]}
+[0m20:44:29.726547 [debug] [MainThread]: Flushing usage events
+[0m20:44:31.767683 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:45:51.331397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9C86314F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9C8631640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9C8631760>]}
+
+
+============================== 20:45:51.336704 | 142cee4b-e7a9-4053-bcc8-407cdf0197f5 ==============================
+[0m20:45:51.336704 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:45:51.336704 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:45:51.339337 [error] [MainThread]: Encountered an error:
+Runtime Error
+  
+  dbt encountered an error while trying to read your profiles.yml file.
+  
+  Runtime Error
+    Syntax error near line 9
+    ------------------------------
+    6  |       host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
+    7  |       user: "{{ env_var('POSTGRES_USER') }}"
+    8  |       password: "{{ env_var('POSTGRES_PASSWORD') }}"
+    9  |       port: {{ env_var('POSTGRES_PORT', '5432') | int }}
+    10 |       dbname: "{{ env_var('POSTGRES_DB') }}"
+    11 |       schema: public
+    12 |       threads: 4
+    
+    Raw Error:
+    ------------------------------
+    while parsing a flow mapping
+      in "<unicode string>", line 9, column 14
+    did not find expected ',' or '}'
+      in "<unicode string>", line 9, column 47
+  
+[0m20:45:51.343055 [debug] [MainThread]: Command `dbt run` failed at 20:45:51.343055 after 0.12 seconds
+[0m20:45:51.343055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9C81A23F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9C7C6A570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9C84DEED0>]}
+[0m20:45:51.344933 [debug] [MainThread]: Flushing usage events
+[0m20:45:52.956086 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:47:31.847235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D609BFF80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D5FF79610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D5FF794C0>]}
+
+
+============================== 20:47:31.863021 | 86d99aca-bf01-42a8-b41f-2a9f39314349 ==============================
+[0m20:47:31.863021 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:47:31.866860 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:47:32.225434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D5DACEB10>]}
+[0m20:47:32.291219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D5E502510>]}
+[0m20:47:32.291219 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:47:32.786322 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m20:47:32.788329 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:47:32.790342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D620940E0>]}
+[0m20:47:35.622359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D62434830>]}
+[0m20:47:35.680246 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:47:35.756641 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:47:35.817599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D624526C0>]}
+[0m20:47:35.817599 [info ] [MainThread]: Found 4 models, 1 test, 433 macros
+[0m20:47:35.817599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D622CCB90>]}
+[0m20:47:35.823002 [info ] [MainThread]: 
+[0m20:47:35.823002 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:47:35.824550 [info ] [MainThread]: 
+[0m20:47:35.824550 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:47:35.828871 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello'
+[0m20:47:35.840315 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello'
+[0m20:47:39.446059 [debug] [ThreadPool]: Using postgres connection "list_hello"
+[0m20:47:39.446059 [debug] [ThreadPool]: Using postgres connection "list_hello"
+[0m20:47:39.446059 [debug] [ThreadPool]: On list_hello: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:47:39.446059 [debug] [ThreadPool]: On list_hello: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:47:39.446059 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:47:39.446059 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:47:39.502639 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.058 seconds
+[0m20:47:39.502639 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.060 seconds
+[0m20:47:39.502639 [debug] [ThreadPool]: On list_hello: Close
+[0m20:47:39.502639 [debug] [ThreadPool]: On list_hello: Close
+[0m20:47:39.502639 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hello, now create_hello_public_marts)
+[0m20:47:39.517496 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hello, now create_hello_public_staging)
+[0m20:47:39.518504 [debug] [ThreadPool]: Creating schema "database: "hello"
+schema: "public_marts"
+"
+[0m20:47:39.519703 [debug] [ThreadPool]: Creating schema "database: "hello"
+schema: "public_staging"
+"
+[0m20:47:39.519703 [debug] [ThreadPool]: Using postgres connection "create_hello_public_marts"
+[0m20:47:39.519703 [debug] [ThreadPool]: Using postgres connection "create_hello_public_staging"
+[0m20:47:39.519703 [debug] [ThreadPool]: On create_hello_public_marts: BEGIN
+[0m20:47:39.527890 [debug] [ThreadPool]: On create_hello_public_staging: BEGIN
+[0m20:47:39.527890 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:47:39.527890 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:47:39.583713 [debug] [ThreadPool]: SQL status: BEGIN in 0.056 seconds
+[0m20:47:39.583713 [debug] [ThreadPool]: Using postgres connection "create_hello_public_marts"
+[0m20:47:39.585721 [debug] [ThreadPool]: On create_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "create_hello_public_marts"} */
+create schema if not exists "public_marts"
+[0m20:47:39.589356 [debug] [ThreadPool]: SQL status: BEGIN in 0.061 seconds
+[0m20:47:39.590399 [debug] [ThreadPool]: Using postgres connection "create_hello_public_staging"
+[0m20:47:39.590399 [debug] [ThreadPool]: On create_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "create_hello_public_staging"} */
+create schema if not exists "public_staging"
+[0m20:47:39.590399 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.005 seconds
+[0m20:47:39.592913 [debug] [ThreadPool]: On create_hello_public_marts: COMMIT
+[0m20:47:39.593989 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.002 seconds
+[0m20:47:39.594521 [debug] [ThreadPool]: Using postgres connection "create_hello_public_marts"
+[0m20:47:39.594521 [debug] [ThreadPool]: On create_hello_public_staging: COMMIT
+[0m20:47:39.594521 [debug] [ThreadPool]: On create_hello_public_marts: COMMIT
+[0m20:47:39.597342 [debug] [ThreadPool]: Using postgres connection "create_hello_public_staging"
+[0m20:47:39.597342 [debug] [ThreadPool]: On create_hello_public_staging: COMMIT
+[0m20:47:39.599350 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m20:47:39.599856 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m20:47:39.599856 [debug] [ThreadPool]: On create_hello_public_marts: Close
+[0m20:47:39.600839 [debug] [ThreadPool]: On create_hello_public_staging: Close
+[0m20:47:39.603354 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_marts'
+[0m20:47:39.613369 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_staging'
+[0m20:47:39.615888 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:47:39.619909 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:47:39.619909 [debug] [ThreadPool]: On list_hello_public_marts: BEGIN
+[0m20:47:39.619909 [debug] [ThreadPool]: On list_hello_public_staging: BEGIN
+[0m20:47:39.621919 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:47:39.621919 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:47:39.677677 [debug] [ThreadPool]: SQL status: BEGIN in 0.055 seconds
+[0m20:47:39.678444 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:47:39.680451 [debug] [ThreadPool]: On list_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_marts"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m20:47:39.686278 [debug] [ThreadPool]: SQL status: BEGIN in 0.063 seconds
+[0m20:47:39.687401 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:47:39.687401 [debug] [ThreadPool]: On list_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_staging"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m20:47:39.701816 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.013 seconds
+[0m20:47:39.701816 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.022 seconds
+[0m20:47:39.704880 [debug] [ThreadPool]: On list_hello_public_staging: ROLLBACK
+[0m20:47:39.705550 [debug] [ThreadPool]: On list_hello_public_marts: ROLLBACK
+[0m20:47:39.708917 [debug] [ThreadPool]: On list_hello_public_staging: Close
+[0m20:47:39.709920 [debug] [ThreadPool]: On list_hello_public_marts: Close
+[0m20:47:39.714669 [debug] [MainThread]: Using postgres connection "master"
+[0m20:47:39.714669 [debug] [MainThread]: On master: BEGIN
+[0m20:47:39.718688 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:47:39.757609 [debug] [MainThread]: SQL status: BEGIN in 0.047 seconds
+[0m20:47:39.757609 [debug] [MainThread]: Using postgres connection "master"
+[0m20:47:39.757609 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:47:39.771778 [debug] [MainThread]: SQL status: SELECT 0 in 0.013 seconds
+[0m20:47:39.771778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D62760860>]}
+[0m20:47:39.771778 [debug] [MainThread]: On master: ROLLBACK
+[0m20:47:39.771778 [debug] [MainThread]: Using postgres connection "master"
+[0m20:47:39.771778 [debug] [MainThread]: On master: BEGIN
+[0m20:47:39.771778 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m20:47:39.771778 [debug] [MainThread]: On master: COMMIT
+[0m20:47:39.771778 [debug] [MainThread]: Using postgres connection "master"
+[0m20:47:39.771778 [debug] [MainThread]: On master: COMMIT
+[0m20:47:39.786537 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:47:39.786537 [debug] [MainThread]: On master: Close
+[0m20:47:39.787543 [debug] [Thread-1 (]: Began running node model.telegram_data_warehouse.dim_dates
+[0m20:47:39.787543 [debug] [Thread-2 (]: Began running node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:47:39.787543 [info ] [Thread-1 (]: 1 of 4 START sql table model public_marts.dim_dates ............................ [RUN]
+[0m20:47:39.787543 [info ] [Thread-2 (]: 2 of 4 START sql view model public_staging.stg_telegram_messages ............... [RUN]
+[0m20:47:39.787543 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.dim_dates'
+[0m20:47:39.787543 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.stg_telegram_messages'
+[0m20:47:39.787543 [debug] [Thread-1 (]: Began compiling node model.telegram_data_warehouse.dim_dates
+[0m20:47:39.787543 [debug] [Thread-2 (]: Began compiling node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:47:39.804674 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_data_warehouse.dim_dates"
+[0m20:47:39.808302 [debug] [Thread-2 (]: Writing injected SQL for node "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:47:39.811709 [debug] [Thread-1 (]: Began executing node model.telegram_data_warehouse.dim_dates
+[0m20:47:39.844046 [debug] [Thread-2 (]: Began executing node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:47:39.846295 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_data_warehouse.dim_dates"
+[0m20:47:39.864475 [debug] [Thread-2 (]: Writing runtime sql for node "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:47:39.864475 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:47:39.864475 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: BEGIN
+[0m20:47:39.864475 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:47:39.864475 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:47:39.864475 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: BEGIN
+[0m20:47:39.864475 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:47:39.907837 [debug] [Thread-1 (]: SQL status: BEGIN in 0.045 seconds
+[0m20:47:39.914470 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:47:39.914470 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_dates"} */
+
+  
+    
+
+  create  table "hello"."public_marts"."dim_dates__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Dimension table for time-based analysis
+WITH date_range AS (
+    SELECT generate_series(
+        '2025-01-01'::DATE,
+        '2025-12-31'::DATE,
+        INTERVAL '1 day'
+    ) AS date_day
+)
+SELECT
+    (EXTRACT(EPOCH FROM date_day)::BIGINT * 1000) AS date_id,
+    date_day,
+    EXTRACT(YEAR FROM date_day) AS year,
+    EXTRACT(MONTH FROM date_day) AS month,
+    EXTRACT(DAY FROM date_day) AS day,
+    EXTRACT(DOW FROM date_day) AS day_of_week,
+    EXTRACT(WEEK FROM date_day) AS week_of_year
+FROM date_range
+  );
+  
+[0m20:47:39.917055 [debug] [Thread-2 (]: SQL status: BEGIN in 0.046 seconds
+[0m20:47:39.917055 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:47:39.917055 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+
+  create view "hello"."public_staging"."stg_telegram_messages__dbt_tmp"
+    
+    
+  as (
+    
+
+-- Staging model to clean and extract fields from raw JSON data
+SELECT
+    id AS message_id,
+    channel_name,
+    message_date::TIMESTAMP AS message_date,
+    (message_data->>'text')::TEXT AS message_text,
+    (message_data->>'sender_id')::BIGINT AS sender_id,
+    (message_data->>'has_media')::BOOLEAN AS has_media,
+    (message_data->>'media_type')::TEXT AS media_type,
+    (message_data->>'media_path')::TEXT AS media_path,
+    (message_data->>'caption')::TEXT AS caption,
+    (message_data->>'is_reply')::BOOLEAN AS is_reply,
+    (message_data->>'forwarded_from')::BIGINT AS forwarded_from,
+    loaded_at
+FROM raw.telegram_messages
+  );
+[0m20:47:39.937728 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.019 seconds
+[0m20:47:39.946168 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:47:39.946168 [debug] [Thread-1 (]: SQL status: SELECT 365 in 0.031 seconds
+[0m20:47:39.946168 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+alter table "hello"."public_staging"."stg_telegram_messages__dbt_tmp" rename to "stg_telegram_messages"
+[0m20:47:39.954682 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:47:39.954682 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_dates"} */
+alter table "hello"."public_marts"."dim_dates__dbt_tmp" rename to "dim_dates"
+[0m20:47:39.954682 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:47:39.954682 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:47:39.963064 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: COMMIT
+[0m20:47:39.963064 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: COMMIT
+[0m20:47:39.963064 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:47:39.963064 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:47:39.963064 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: COMMIT
+[0m20:47:39.963064 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: COMMIT
+[0m20:47:39.978219 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m20:47:39.978219 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m20:47:39.984953 [debug] [Thread-2 (]: Applying DROP to: "hello"."public_staging"."stg_telegram_messages__dbt_backup"
+[0m20:47:39.984953 [debug] [Thread-1 (]: Applying DROP to: "hello"."public_marts"."dim_dates__dbt_backup"
+[0m20:47:39.991505 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:47:39.994210 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:47:39.994210 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+drop view if exists "hello"."public_staging"."stg_telegram_messages__dbt_backup" cascade
+[0m20:47:39.994210 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_dates"} */
+drop table if exists "hello"."public_marts"."dim_dates__dbt_backup" cascade
+[0m20:47:39.994210 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m20:47:39.994210 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m20:47:39.994210 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: Close
+[0m20:47:39.994210 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: Close
+[0m20:47:39.994210 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D62BFB440>]}
+[0m20:47:39.994210 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D62BEC080>]}
+[0m20:47:39.994210 [info ] [Thread-1 (]: 1 of 4 OK created sql table model public_marts.dim_dates ....................... [[32mSELECT 365[0m in 0.21s]
+[0m20:47:39.994210 [info ] [Thread-2 (]: 2 of 4 OK created sql view model public_staging.stg_telegram_messages .......... [[32mCREATE VIEW[0m in 0.21s]
+[0m20:47:39.994210 [debug] [Thread-1 (]: Finished running node model.telegram_data_warehouse.dim_dates
+[0m20:47:40.010247 [debug] [Thread-2 (]: Finished running node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:47:40.010247 [debug] [Thread-4 (]: Began running node model.telegram_data_warehouse.dim_channels
+[0m20:47:40.010247 [info ] [Thread-4 (]: 3 of 4 START sql table model public_marts.dim_channels ......................... [RUN]
+[0m20:47:40.010247 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.dim_channels'
+[0m20:47:40.010247 [debug] [Thread-4 (]: Began compiling node model.telegram_data_warehouse.dim_channels
+[0m20:47:40.016725 [debug] [Thread-4 (]: Writing injected SQL for node "model.telegram_data_warehouse.dim_channels"
+[0m20:47:40.019033 [debug] [Thread-4 (]: Began executing node model.telegram_data_warehouse.dim_channels
+[0m20:47:40.019540 [debug] [Thread-4 (]: Writing runtime sql for node "model.telegram_data_warehouse.dim_channels"
+[0m20:47:40.019540 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:47:40.019540 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: BEGIN
+[0m20:47:40.019540 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:47:40.064686 [debug] [Thread-4 (]: SQL status: BEGIN in 0.044 seconds
+[0m20:47:40.064686 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:47:40.064686 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_channels"} */
+
+  
+    
+
+  create  table "hello"."public_marts"."dim_channels__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Dimension table for Telegram channels
+WITH source AS (
+    SELECT DISTINCT channel_name
+    FROM "hello"."public_staging"."stg_telegram_messages"
+)
+SELECT
+    ROW_NUMBER() OVER () AS channel_id,
+    channel_name
+FROM source
+  );
+  
+[0m20:47:40.081301 [debug] [Thread-4 (]: SQL status: SELECT 2 in 0.011 seconds
+[0m20:47:40.081301 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:47:40.081301 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_channels"} */
+alter table "hello"."public_marts"."dim_channels__dbt_tmp" rename to "dim_channels"
+[0m20:47:40.081301 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:47:40.081301 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: COMMIT
+[0m20:47:40.081301 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:47:40.081301 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: COMMIT
+[0m20:47:40.090640 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:47:40.090640 [debug] [Thread-4 (]: Applying DROP to: "hello"."public_marts"."dim_channels__dbt_backup"
+[0m20:47:40.090640 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:47:40.090640 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_channels"} */
+drop table if exists "hello"."public_marts"."dim_channels__dbt_backup" cascade
+[0m20:47:40.090640 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m20:47:40.096302 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: Close
+[0m20:47:40.096302 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D627CF410>]}
+[0m20:47:40.099096 [info ] [Thread-4 (]: 3 of 4 OK created sql table model public_marts.dim_channels .................... [[32mSELECT 2[0m in 0.09s]
+[0m20:47:40.099096 [debug] [Thread-4 (]: Finished running node model.telegram_data_warehouse.dim_channels
+[0m20:47:40.099096 [debug] [Thread-1 (]: Began running node model.telegram_data_warehouse.fct_messages
+[0m20:47:40.099096 [info ] [Thread-1 (]: 4 of 4 START sql table model public_marts.fct_messages ......................... [RUN]
+[0m20:47:40.099096 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.telegram_data_warehouse.dim_dates, now model.telegram_data_warehouse.fct_messages)
+[0m20:47:40.099096 [debug] [Thread-1 (]: Began compiling node model.telegram_data_warehouse.fct_messages
+[0m20:47:40.106424 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_data_warehouse.fct_messages"
+[0m20:47:40.107435 [debug] [Thread-1 (]: Began executing node model.telegram_data_warehouse.fct_messages
+[0m20:47:40.112239 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_data_warehouse.fct_messages"
+[0m20:47:40.114370 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:47:40.114370 [debug] [Thread-1 (]: On model.telegram_data_warehouse.fct_messages: BEGIN
+[0m20:47:40.114370 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:47:40.163071 [debug] [Thread-1 (]: SQL status: BEGIN in 0.047 seconds
+[0m20:47:40.163071 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:47:40.163071 [debug] [Thread-1 (]: On model.telegram_data_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.fct_messages"} */
+
+  
+    
+
+  create  table "hello"."public_marts"."fct_messages__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Fact table for Telegram messages, linking to dim_channels and dim_dates
+-- Contains metrics like message_length and supports analysis of visual content and trends
+WITH messages AS (
+    SELECT
+        m.message_id,
+        m.channel_name,
+        m.message_date,
+        m.message_text,
+        m.sender_id,
+        m.has_media,
+        m.media_type,
+        m.media_path,
+        m.caption,
+        m.is_reply,
+        m.forwarded_from,
+        LENGTH(COALESCE(m.message_text, '')) AS message_length,
+        c.channel_id,
+        (EXTRACT(EPOCH FROM m.message_date)::BIGINT * 1000) AS date_id
+    FROM "hello"."public_staging"."stg_telegram_messages" m
+    LEFT JOIN "hello"."public_marts"."dim_channels" c
+        ON m.channel_name = c.channel_name
+)
+SELECT
+    (channel_id || '-' || message_id || '-' || date_id)::TEXT AS message_key,
+    channel_id,
+    date_id,
+    message_id,
+    message_text,
+    sender_id,
+    has_media,
+    media_type,
+    media_path,
+    caption,
+    is_reply,
+    forwarded_from,
+    message_length
+FROM messages
+  );
+  
+[0m20:47:40.187443 [debug] [Thread-1 (]: SQL status: SELECT 204 in 0.024 seconds
+[0m20:47:40.190884 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:47:40.192893 [debug] [Thread-1 (]: On model.telegram_data_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.fct_messages"} */
+alter table "hello"."public_marts"."fct_messages__dbt_tmp" rename to "fct_messages"
+[0m20:47:40.192893 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:47:40.195519 [debug] [Thread-1 (]: On model.telegram_data_warehouse.fct_messages: COMMIT
+[0m20:47:40.195519 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:47:40.195519 [debug] [Thread-1 (]: On model.telegram_data_warehouse.fct_messages: COMMIT
+[0m20:47:40.197706 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m20:47:40.202869 [debug] [Thread-1 (]: Applying DROP to: "hello"."public_marts"."fct_messages__dbt_backup"
+[0m20:47:40.202869 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:47:40.202869 [debug] [Thread-1 (]: On model.telegram_data_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.fct_messages"} */
+drop table if exists "hello"."public_marts"."fct_messages__dbt_backup" cascade
+[0m20:47:40.204877 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m20:47:40.204877 [debug] [Thread-1 (]: On model.telegram_data_warehouse.fct_messages: Close
+[0m20:47:40.207431 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86d99aca-bf01-42a8-b41f-2a9f39314349', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D62C4D370>]}
+[0m20:47:40.207431 [info ] [Thread-1 (]: 4 of 4 OK created sql table model public_marts.fct_messages .................... [[32mSELECT 204[0m in 0.11s]
+[0m20:47:40.207431 [debug] [Thread-1 (]: Finished running node model.telegram_data_warehouse.fct_messages
+[0m20:47:40.211487 [debug] [MainThread]: Using postgres connection "master"
+[0m20:47:40.211487 [debug] [MainThread]: On master: BEGIN
+[0m20:47:40.211487 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:47:40.246658 [debug] [MainThread]: SQL status: BEGIN in 0.044 seconds
+[0m20:47:40.246658 [debug] [MainThread]: On master: COMMIT
+[0m20:47:40.258665 [debug] [MainThread]: Using postgres connection "master"
+[0m20:47:40.258665 [debug] [MainThread]: On master: COMMIT
+[0m20:47:40.258665 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:47:40.258665 [debug] [MainThread]: On master: Close
+[0m20:47:40.258665 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:47:40.258665 [debug] [MainThread]: Connection 'create_hello_public_staging' was properly closed.
+[0m20:47:40.258665 [debug] [MainThread]: Connection 'create_hello_public_marts' was properly closed.
+[0m20:47:40.258665 [debug] [MainThread]: Connection 'list_hello_public_marts' was properly closed.
+[0m20:47:40.262986 [debug] [MainThread]: Connection 'list_hello_public_staging' was properly closed.
+[0m20:47:40.262986 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.fct_messages' was properly closed.
+[0m20:47:40.262986 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.stg_telegram_messages' was properly closed.
+[0m20:47:40.262986 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.dim_channels' was properly closed.
+[0m20:47:40.262986 [info ] [MainThread]: 
+[0m20:47:40.265895 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 4.44 seconds (4.44s).
+[0m20:47:40.266903 [debug] [MainThread]: Command end result
+[0m20:47:40.281290 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:47:40.281290 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:47:40.292060 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\HP ENVY\Desktop\weak7\dbt\target\run_results.json
+[0m20:47:40.292060 [info ] [MainThread]: 
+[0m20:47:40.292060 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:47:40.292060 [info ] [MainThread]: 
+[0m20:47:40.292060 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m20:47:40.297717 [debug] [MainThread]: Command `dbt run` succeeded at 20:47:40.297717 after 8.63 seconds
+[0m20:47:40.299721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D60929B80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D609EE270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D60768770>]}
+[0m20:47:40.300449 [debug] [MainThread]: Flushing usage events
+[0m20:47:41.679697 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:50:42.686398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B3411EB70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B3411EDE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B3411D400>]}
+
+
+============================== 20:50:42.686398 | cd9b7b95-bf7d-490b-bc05-a63eb72163dc ==============================
+[0m20:50:42.686398 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:50:42.702237 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m20:50:42.900379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cd9b7b95-bf7d-490b-bc05-a63eb72163dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B340EF620>]}
+[0m20:50:42.966092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cd9b7b95-bf7d-490b-bc05-a63eb72163dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B32032E70>]}
+[0m20:50:42.966092 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:50:43.181923 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m20:50:43.326134 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:50:43.326134 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:50:43.372833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cd9b7b95-bf7d-490b-bc05-a63eb72163dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B35D0E840>]}
+[0m20:50:43.435858 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:50:43.435858 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:50:43.484290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cd9b7b95-bf7d-490b-bc05-a63eb72163dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B36136A80>]}
+[0m20:50:43.484290 [info ] [MainThread]: Found 4 models, 1 test, 433 macros
+[0m20:50:43.484290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cd9b7b95-bf7d-490b-bc05-a63eb72163dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B36117050>]}
+[0m20:50:43.484290 [info ] [MainThread]: 
+[0m20:50:43.484290 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:50:43.484290 [info ] [MainThread]: 
+[0m20:50:43.491950 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:50:43.491950 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_marts'
+[0m20:50:43.500092 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_staging'
+[0m20:50:43.584337 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:50:43.584337 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:50:43.584337 [debug] [ThreadPool]: On list_hello_public_marts: BEGIN
+[0m20:50:43.587911 [debug] [ThreadPool]: On list_hello_public_staging: BEGIN
+[0m20:50:43.587911 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:50:43.588921 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:50:43.638880 [debug] [ThreadPool]: SQL status: BEGIN in 0.051 seconds
+[0m20:50:43.638880 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:50:43.638880 [debug] [ThreadPool]: On list_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_staging"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m20:50:43.646718 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.005 seconds
+[0m20:50:43.649746 [debug] [ThreadPool]: On list_hello_public_staging: ROLLBACK
+[0m20:50:43.649746 [debug] [ThreadPool]: On list_hello_public_staging: Close
+[0m20:50:43.754813 [debug] [ThreadPool]: SQL status: BEGIN in 0.168 seconds
+[0m20:50:43.754813 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:50:43.754813 [debug] [ThreadPool]: On list_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_marts"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m20:50:43.763154 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.005 seconds
+[0m20:50:43.763154 [debug] [ThreadPool]: On list_hello_public_marts: ROLLBACK
+[0m20:50:43.763154 [debug] [ThreadPool]: On list_hello_public_marts: Close
+[0m20:50:43.765857 [debug] [MainThread]: Using postgres connection "master"
+[0m20:50:43.772198 [debug] [MainThread]: On master: BEGIN
+[0m20:50:43.772198 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:50:43.811702 [debug] [MainThread]: SQL status: BEGIN in 0.039 seconds
+[0m20:50:43.812211 [debug] [MainThread]: Using postgres connection "master"
+[0m20:50:43.812211 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:50:43.812211 [debug] [MainThread]: SQL status: SELECT 1 in 0.008 seconds
+[0m20:50:43.812211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cd9b7b95-bf7d-490b-bc05-a63eb72163dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B3179C590>]}
+[0m20:50:43.812211 [debug] [MainThread]: On master: ROLLBACK
+[0m20:50:43.812211 [debug] [MainThread]: Using postgres connection "master"
+[0m20:50:43.812211 [debug] [MainThread]: On master: BEGIN
+[0m20:50:43.826609 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m20:50:43.826609 [debug] [MainThread]: On master: COMMIT
+[0m20:50:43.826609 [debug] [MainThread]: Using postgres connection "master"
+[0m20:50:43.826609 [debug] [MainThread]: On master: COMMIT
+[0m20:50:43.826609 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:50:43.826609 [debug] [MainThread]: On master: Close
+[0m20:50:43.834081 [debug] [Thread-1 (]: Began running node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:50:43.834081 [info ] [Thread-1 (]: 1 of 1 START test no_duplicate_messages ........................................ [RUN]
+[0m20:50:43.836091 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.telegram_data_warehouse.no_duplicate_messages'
+[0m20:50:43.836091 [debug] [Thread-1 (]: Began compiling node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:50:43.844550 [debug] [Thread-1 (]: Writing injected SQL for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:50:43.849360 [debug] [Thread-1 (]: Began executing node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:50:43.861096 [debug] [Thread-1 (]: Writing runtime sql for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:50:43.861096 [debug] [Thread-1 (]: Using postgres connection "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:50:43.861096 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: BEGIN
+[0m20:50:43.861096 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:50:43.907066 [debug] [Thread-1 (]: SQL status: BEGIN in 0.040 seconds
+[0m20:50:43.907066 [debug] [Thread-1 (]: Using postgres connection "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:50:43.907066 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "test.telegram_data_warehouse.no_duplicate_messages"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Custom test to ensure no duplicate messages per channel and date
+SELECT
+    message_id,
+    channel_name,
+    message_date::DATE,
+    COUNT(*) AS cnt
+FROM "hello"."public_staging"."stg_telegram_messages"
+GROUP BY message_id, channel_name, message_date::DATE
+HAVING COUNT(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+[0m20:50:43.954040 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.042 seconds
+[0m20:50:43.962698 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: ROLLBACK
+[0m20:50:43.962698 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: Close
+[0m20:50:43.962698 [error] [Thread-1 (]: 1 of 1 FAIL 4 no_duplicate_messages ............................................ [[31mFAIL 4[0m in 0.13s]
+[0m20:50:43.962698 [debug] [Thread-1 (]: Finished running node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:50:43.962698 [debug] [MainThread]: Using postgres connection "master"
+[0m20:50:43.962698 [debug] [MainThread]: On master: BEGIN
+[0m20:50:43.962698 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:50:44.119806 [debug] [MainThread]: SQL status: BEGIN in 0.155 seconds
+[0m20:50:44.119806 [debug] [MainThread]: On master: COMMIT
+[0m20:50:44.119806 [debug] [MainThread]: Using postgres connection "master"
+[0m20:50:44.119806 [debug] [MainThread]: On master: COMMIT
+[0m20:50:44.119806 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:50:44.119806 [debug] [MainThread]: On master: Close
+[0m20:50:44.119806 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:50:44.129192 [debug] [MainThread]: Connection 'list_hello_public_marts' was properly closed.
+[0m20:50:44.129192 [debug] [MainThread]: Connection 'list_hello_public_staging' was properly closed.
+[0m20:50:44.129192 [debug] [MainThread]: Connection 'test.telegram_data_warehouse.no_duplicate_messages' was properly closed.
+[0m20:50:44.129192 [info ] [MainThread]: 
+[0m20:50:44.129192 [info ] [MainThread]: Finished running 1 test in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[0m20:50:44.129192 [debug] [MainThread]: Command end result
+[0m20:50:44.152700 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:50:44.152700 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:50:44.167870 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\HP ENVY\Desktop\weak7\dbt\target\run_results.json
+[0m20:50:44.167870 [info ] [MainThread]: 
+[0m20:50:44.167870 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m20:50:44.167870 [info ] [MainThread]: 
+[0m20:50:44.167870 [error] [MainThread]: [31mFailure in test no_duplicate_messages (tests\custom\no_duplicate_messages.sql)[0m
+[0m20:50:44.167870 [error] [MainThread]:   Got 4 results, configured to fail if != 0
+[0m20:50:44.167870 [info ] [MainThread]: 
+[0m20:50:44.167870 [info ] [MainThread]:   compiled code at target\compiled\telegram_data_warehouse\tests\custom\no_duplicate_messages.sql
+[0m20:50:44.167870 [info ] [MainThread]: 
+[0m20:50:44.176996 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m20:50:44.176996 [debug] [MainThread]: Command `dbt test` failed at 20:50:44.176996 after 1.65 seconds
+[0m20:50:44.176996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B344D7470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B345AFFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B33EE8530>]}
+[0m20:50:44.176996 [debug] [MainThread]: Flushing usage events
+[0m20:50:45.386063 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:54:06.067711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B8D2C9910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B8F809640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B902CC920>]}
+
+
+============================== 20:54:06.067711 | e7274c9e-fa38-4456-abfd-870d00b168e0 ==============================
+[0m20:54:06.067711 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:54:06.067711 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --select stg_telegram_messages', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:54:06.275585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e7274c9e-fa38-4456-abfd-870d00b168e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B914D5FA0>]}
+[0m20:54:06.331232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e7274c9e-fa38-4456-abfd-870d00b168e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B8FA58B30>]}
+[0m20:54:06.331232 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:54:06.555523 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m20:54:06.681683 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:54:06.681683 [debug] [MainThread]: Partial parsing: updated file: telegram_data_warehouse://models\staging\stg_telegram_messages.sql
+[0m20:54:06.904130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e7274c9e-fa38-4456-abfd-870d00b168e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B91DAE3C0>]}
+[0m20:54:06.967436 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:54:06.967436 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:54:06.999251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e7274c9e-fa38-4456-abfd-870d00b168e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B91D60DA0>]}
+[0m20:54:06.999251 [info ] [MainThread]: Found 4 models, 1 test, 433 macros
+[0m20:54:06.999251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7274c9e-fa38-4456-abfd-870d00b168e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B916437A0>]}
+[0m20:54:06.999251 [info ] [MainThread]: 
+[0m20:54:06.999251 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:54:06.999251 [info ] [MainThread]: 
+[0m20:54:06.999251 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:54:06.999251 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello'
+[0m20:54:07.089391 [debug] [ThreadPool]: Using postgres connection "list_hello"
+[0m20:54:07.089391 [debug] [ThreadPool]: On list_hello: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:54:07.089391 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:54:07.135164 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.046 seconds
+[0m20:54:07.135164 [debug] [ThreadPool]: On list_hello: Close
+[0m20:54:07.140927 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_staging'
+[0m20:54:07.140927 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_marts'
+[0m20:54:07.140927 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:54:07.150959 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:54:07.150959 [debug] [ThreadPool]: On list_hello_public_staging: BEGIN
+[0m20:54:07.150959 [debug] [ThreadPool]: On list_hello_public_marts: BEGIN
+[0m20:54:07.150959 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:54:07.150959 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:54:07.181387 [debug] [ThreadPool]: SQL status: BEGIN in 0.043 seconds
+[0m20:54:07.197113 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:54:07.197113 [debug] [ThreadPool]: On list_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_staging"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m20:54:07.197113 [debug] [ThreadPool]: SQL status: BEGIN in 0.047 seconds
+[0m20:54:07.197113 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:54:07.197113 [debug] [ThreadPool]: On list_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_marts"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m20:54:07.202837 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.008 seconds
+[0m20:54:07.202837 [debug] [ThreadPool]: On list_hello_public_staging: ROLLBACK
+[0m20:54:07.208584 [debug] [ThreadPool]: On list_hello_public_staging: Close
+[0m20:54:07.208584 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.008 seconds
+[0m20:54:07.213001 [debug] [ThreadPool]: On list_hello_public_marts: ROLLBACK
+[0m20:54:07.213001 [debug] [ThreadPool]: On list_hello_public_marts: Close
+[0m20:54:07.216761 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:07.216761 [debug] [MainThread]: On master: BEGIN
+[0m20:54:07.216761 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:54:07.260370 [debug] [MainThread]: SQL status: BEGIN in 0.039 seconds
+[0m20:54:07.260370 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:07.260370 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:54:07.271628 [debug] [MainThread]: SQL status: SELECT 1 in 0.010 seconds
+[0m20:54:07.271628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7274c9e-fa38-4456-abfd-870d00b168e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9161FC50>]}
+[0m20:54:07.271628 [debug] [MainThread]: On master: ROLLBACK
+[0m20:54:07.271628 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:07.271628 [debug] [MainThread]: On master: BEGIN
+[0m20:54:07.271628 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m20:54:07.276186 [debug] [MainThread]: On master: COMMIT
+[0m20:54:07.276186 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:07.276186 [debug] [MainThread]: On master: COMMIT
+[0m20:54:07.277693 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:54:07.277693 [debug] [MainThread]: On master: Close
+[0m20:54:07.279564 [debug] [Thread-1 (]: Began running node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:54:07.279564 [info ] [Thread-1 (]: 1 of 1 START sql view model public_staging.stg_telegram_messages ............... [RUN]
+[0m20:54:07.279564 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.stg_telegram_messages'
+[0m20:54:07.279564 [debug] [Thread-1 (]: Began compiling node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:54:07.293691 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:54:07.295948 [debug] [Thread-1 (]: Began executing node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:54:07.326375 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:54:07.331778 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:54:07.331778 [debug] [Thread-1 (]: On model.telegram_data_warehouse.stg_telegram_messages: BEGIN
+[0m20:54:07.331778 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:54:07.364449 [debug] [Thread-1 (]: SQL status: BEGIN in 0.038 seconds
+[0m20:54:07.372612 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:54:07.372612 [debug] [Thread-1 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+
+  create view "hello"."public_staging"."stg_telegram_messages__dbt_tmp"
+    
+    
+  as (
+    -- 
+
+-- -- Staging model to clean and extract fields from raw JSON data
+-- SELECT
+--     id AS message_id,
+--     channel_name,
+--     message_date::TIMESTAMP AS message_date,
+--     (message_data->>'text')::TEXT AS message_text,
+--     (message_data->>'sender_id')::BIGINT AS sender_id,
+--     (message_data->>'has_media')::BOOLEAN AS has_media,
+--     (message_data->>'media_type')::TEXT AS media_type,
+--     (message_data->>'media_path')::TEXT AS media_path,
+--     (message_data->>'caption')::TEXT AS caption,
+--     (message_data->>'is_reply')::BOOLEAN AS is_reply,
+--     (message_data->>'forwarded_from')::BIGINT AS forwarded_from,
+--     loaded_at
+-- FROM raw.telegram_messages
+
+
+
+
+
+-- Staging model to clean and extract fields from raw JSON data
+WITH numbered_messages AS (
+    SELECT
+        id AS message_id,
+        channel_name,
+        message_date::TIMESTAMP AS message_date,
+        (message_data->>'text')::TEXT AS message_text,
+        (message_data->>'sender_id')::BIGINT AS sender_id,
+        (message_data->>'has_media')::BOOLEAN AS has_media,
+        (message_data->>'media_type')::TEXT AS media_type,
+        (message_data->>'media_path')::TEXT AS media_path,
+        (message_data->>'caption')::TEXT AS caption,
+        (message_data->>'is_reply')::BOOLEAN AS is_reply,
+        (message_data->>'forwarded_from')::BIGINT AS forwarded_from,
+        loaded_at,
+        ROW_NUMBER() OVER (
+            PARTITION BY id, channel_name, message_date::DATE
+            ORDER BY loaded_at
+        ) AS row_num
+    FROM raw.telegram_messages
+)
+
+SELECT *
+FROM numbered_messages
+WHERE row_num = 1
+  );
+[0m20:54:07.428490 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.057 seconds
+[0m20:54:07.428490 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:54:07.428490 [debug] [Thread-1 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+alter table "hello"."public_staging"."stg_telegram_messages" rename to "stg_telegram_messages__dbt_backup"
+[0m20:54:07.428490 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:54:07.444223 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:54:07.444223 [debug] [Thread-1 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+alter table "hello"."public_staging"."stg_telegram_messages__dbt_tmp" rename to "stg_telegram_messages"
+[0m20:54:07.444223 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:54:07.460351 [debug] [Thread-1 (]: On model.telegram_data_warehouse.stg_telegram_messages: COMMIT
+[0m20:54:07.460351 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:54:07.460351 [debug] [Thread-1 (]: On model.telegram_data_warehouse.stg_telegram_messages: COMMIT
+[0m20:54:07.460351 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:54:07.478954 [debug] [Thread-1 (]: Applying DROP to: "hello"."public_staging"."stg_telegram_messages__dbt_backup"
+[0m20:54:07.492091 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:54:07.492091 [debug] [Thread-1 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+drop view if exists "hello"."public_staging"."stg_telegram_messages__dbt_backup" cascade
+[0m20:54:07.492091 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.010 seconds
+[0m20:54:07.508033 [debug] [Thread-1 (]: On model.telegram_data_warehouse.stg_telegram_messages: Close
+[0m20:54:07.508033 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e7274c9e-fa38-4456-abfd-870d00b168e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B8D3BDBB0>]}
+[0m20:54:07.508033 [info ] [Thread-1 (]: 1 of 1 OK created sql view model public_staging.stg_telegram_messages .......... [[32mCREATE VIEW[0m in 0.23s]
+[0m20:54:07.508033 [debug] [Thread-1 (]: Finished running node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:54:07.508033 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:07.508033 [debug] [MainThread]: On master: BEGIN
+[0m20:54:07.508033 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:54:07.558697 [debug] [MainThread]: SQL status: BEGIN in 0.046 seconds
+[0m20:54:07.558697 [debug] [MainThread]: On master: COMMIT
+[0m20:54:07.558697 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:07.558697 [debug] [MainThread]: On master: COMMIT
+[0m20:54:07.569188 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:54:07.569188 [debug] [MainThread]: On master: Close
+[0m20:54:07.569188 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:54:07.569188 [debug] [MainThread]: Connection 'list_hello' was properly closed.
+[0m20:54:07.569188 [debug] [MainThread]: Connection 'list_hello_public_staging' was properly closed.
+[0m20:54:07.569188 [debug] [MainThread]: Connection 'list_hello_public_marts' was properly closed.
+[0m20:54:07.569188 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.stg_telegram_messages' was properly closed.
+[0m20:54:07.569188 [info ] [MainThread]: 
+[0m20:54:07.569188 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.57 seconds (0.57s).
+[0m20:54:07.575052 [debug] [MainThread]: Command end result
+[0m20:54:07.590721 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:54:07.594738 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:54:07.596195 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\HP ENVY\Desktop\weak7\dbt\target\run_results.json
+[0m20:54:07.596195 [info ] [MainThread]: 
+[0m20:54:07.596195 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:54:07.604711 [info ] [MainThread]: 
+[0m20:54:07.605769 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m20:54:07.605769 [debug] [MainThread]: Command `dbt run` succeeded at 20:54:07.605769 after 1.69 seconds
+[0m20:54:07.605769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B8F8D7CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B91FEC740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B91C77BF0>]}
+[0m20:54:07.605769 [debug] [MainThread]: Flushing usage events
+[0m20:54:08.855752 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:54:15.664926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037D1C9340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037D1CACF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037D1C9250>]}
+
+
+============================== 20:54:15.676009 | 4328c9a7-a1db-4eb5-b178-b4fe2a559471 ==============================
+[0m20:54:15.676009 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:54:15.677062 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt test', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:54:15.868724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4328c9a7-a1db-4eb5-b178-b4fe2a559471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037D3AF860>]}
+[0m20:54:15.936478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4328c9a7-a1db-4eb5-b178-b4fe2a559471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037E6FB3B0>]}
+[0m20:54:15.939662 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:54:16.173783 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m20:54:16.319817 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:54:16.319817 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:54:16.351976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4328c9a7-a1db-4eb5-b178-b4fe2a559471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037E7ED430>]}
+[0m20:54:16.412747 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:54:16.415639 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:54:16.477266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4328c9a7-a1db-4eb5-b178-b4fe2a559471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037D3508C0>]}
+[0m20:54:16.477266 [info ] [MainThread]: Found 4 models, 1 test, 433 macros
+[0m20:54:16.477266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4328c9a7-a1db-4eb5-b178-b4fe2a559471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037E41CEF0>]}
+[0m20:54:16.477266 [info ] [MainThread]: 
+[0m20:54:16.477266 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:54:16.477266 [info ] [MainThread]: 
+[0m20:54:16.477266 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:54:16.497149 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_marts'
+[0m20:54:16.499064 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_staging'
+[0m20:54:16.589999 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:54:16.590719 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:54:16.590719 [debug] [ThreadPool]: On list_hello_public_staging: BEGIN
+[0m20:54:16.590719 [debug] [ThreadPool]: On list_hello_public_marts: BEGIN
+[0m20:54:16.593393 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:54:16.594024 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:54:16.645763 [debug] [ThreadPool]: SQL status: BEGIN in 0.052 seconds
+[0m20:54:16.645763 [debug] [ThreadPool]: SQL status: BEGIN in 0.053 seconds
+[0m20:54:16.647293 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:54:16.647293 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:54:16.647293 [debug] [ThreadPool]: On list_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_marts"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m20:54:16.648833 [debug] [ThreadPool]: On list_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_staging"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m20:54:16.656187 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.007 seconds
+[0m20:54:16.656187 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.008 seconds
+[0m20:54:16.657717 [debug] [ThreadPool]: On list_hello_public_staging: ROLLBACK
+[0m20:54:16.659255 [debug] [ThreadPool]: On list_hello_public_marts: ROLLBACK
+[0m20:54:16.660779 [debug] [ThreadPool]: On list_hello_public_staging: Close
+[0m20:54:16.660779 [debug] [ThreadPool]: On list_hello_public_marts: Close
+[0m20:54:16.667132 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:16.668665 [debug] [MainThread]: On master: BEGIN
+[0m20:54:16.668665 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:54:16.703664 [debug] [MainThread]: SQL status: BEGIN in 0.039 seconds
+[0m20:54:16.703664 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:16.703664 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:54:16.716178 [debug] [MainThread]: SQL status: SELECT 1 in 0.008 seconds
+[0m20:54:16.716178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4328c9a7-a1db-4eb5-b178-b4fe2a559471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037EC17500>]}
+[0m20:54:16.716178 [debug] [MainThread]: On master: ROLLBACK
+[0m20:54:16.716178 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:16.716178 [debug] [MainThread]: On master: BEGIN
+[0m20:54:16.716178 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m20:54:16.716178 [debug] [MainThread]: On master: COMMIT
+[0m20:54:16.716178 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:16.716178 [debug] [MainThread]: On master: COMMIT
+[0m20:54:16.716178 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:54:16.716178 [debug] [MainThread]: On master: Close
+[0m20:54:16.727032 [debug] [Thread-1 (]: Began running node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:54:16.727032 [info ] [Thread-1 (]: 1 of 1 START test no_duplicate_messages ........................................ [RUN]
+[0m20:54:16.733030 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.telegram_data_warehouse.no_duplicate_messages'
+[0m20:54:16.733030 [debug] [Thread-1 (]: Began compiling node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:54:16.739839 [debug] [Thread-1 (]: Writing injected SQL for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:54:16.739839 [debug] [Thread-1 (]: Began executing node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:54:16.764121 [debug] [Thread-1 (]: Writing runtime sql for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:54:16.764121 [debug] [Thread-1 (]: Using postgres connection "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:54:16.764121 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: BEGIN
+[0m20:54:16.764121 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:54:16.909672 [debug] [Thread-1 (]: SQL status: BEGIN in 0.155 seconds
+[0m20:54:16.909672 [debug] [Thread-1 (]: Using postgres connection "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:54:16.909672 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "test.telegram_data_warehouse.no_duplicate_messages"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Custom test to ensure no duplicate messages per channel and date
+SELECT
+    message_id,
+    channel_name,
+    message_date::DATE,
+    COUNT(*) AS cnt
+FROM "hello"."public_staging"."stg_telegram_messages"
+GROUP BY message_id, channel_name, message_date::DATE
+HAVING COUNT(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+[0m20:54:16.925829 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m20:54:16.932086 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: ROLLBACK
+[0m20:54:16.932086 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: Close
+[0m20:54:16.932086 [info ] [Thread-1 (]: 1 of 1 PASS no_duplicate_messages .............................................. [[32mPASS[0m in 0.20s]
+[0m20:54:16.932086 [debug] [Thread-1 (]: Finished running node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:54:16.932086 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:16.932086 [debug] [MainThread]: On master: BEGIN
+[0m20:54:16.932086 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:54:16.991256 [debug] [MainThread]: SQL status: BEGIN in 0.053 seconds
+[0m20:54:16.991256 [debug] [MainThread]: On master: COMMIT
+[0m20:54:16.991256 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:16.991256 [debug] [MainThread]: On master: COMMIT
+[0m20:54:16.991256 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:54:16.991256 [debug] [MainThread]: On master: Close
+[0m20:54:16.991256 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:54:16.996576 [debug] [MainThread]: Connection 'list_hello_public_marts' was properly closed.
+[0m20:54:16.996576 [debug] [MainThread]: Connection 'list_hello_public_staging' was properly closed.
+[0m20:54:16.996576 [debug] [MainThread]: Connection 'test.telegram_data_warehouse.no_duplicate_messages' was properly closed.
+[0m20:54:16.996576 [info ] [MainThread]: 
+[0m20:54:16.998589 [info ] [MainThread]: Finished running 1 test in 0 hours 0 minutes and 0.52 seconds (0.52s).
+[0m20:54:16.998589 [debug] [MainThread]: Command end result
+[0m20:54:17.010912 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:54:17.021082 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:54:17.030710 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\HP ENVY\Desktop\weak7\dbt\target\run_results.json
+[0m20:54:17.030710 [info ] [MainThread]: 
+[0m20:54:17.030710 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:54:17.033715 [info ] [MainThread]: 
+[0m20:54:17.033715 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m20:54:17.033715 [debug] [MainThread]: Command `dbt test` succeeded at 20:54:17.033715 after 1.51 seconds
+[0m20:54:17.033715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037EAE41D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037EAE41A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002037C7394C0>]}
+[0m20:54:17.033715 [debug] [MainThread]: Flushing usage events
+[0m20:54:18.281153 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:55:09.519710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE21D73E60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE21D73DA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE21D73EC0>]}
+
+
+============================== 20:55:09.531053 | f5209659-0e4b-4aca-b054-7b0784631c5a ==============================
+[0m20:55:09.531053 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:55:09.531053 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m20:55:09.721454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE1ECCEBA0>]}
+[0m20:55:09.769901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE21C3C980>]}
+[0m20:55:09.782928 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:55:09.984618 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m20:55:10.096722 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:55:10.096722 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:55:10.137905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE21D92330>]}
+[0m20:55:10.212089 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:55:10.216305 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:55:10.269089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE235D8D10>]}
+[0m20:55:10.285882 [info ] [MainThread]: Found 4 models, 1 test, 433 macros
+[0m20:55:10.285882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE23304BC0>]}
+[0m20:55:10.285882 [info ] [MainThread]: 
+[0m20:55:10.285882 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:55:10.285882 [info ] [MainThread]: 
+[0m20:55:10.285882 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:55:10.296288 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello'
+[0m20:55:10.301384 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello'
+[0m20:55:10.380686 [debug] [ThreadPool]: Using postgres connection "list_hello"
+[0m20:55:10.380686 [debug] [ThreadPool]: Using postgres connection "list_hello"
+[0m20:55:10.380686 [debug] [ThreadPool]: On list_hello: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:55:10.382141 [debug] [ThreadPool]: On list_hello: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:55:10.382141 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:10.382141 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:10.432247 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.053 seconds
+[0m20:55:10.437334 [debug] [ThreadPool]: On list_hello: Close
+[0m20:55:10.444392 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.061 seconds
+[0m20:55:10.444392 [debug] [ThreadPool]: On list_hello: Close
+[0m20:55:10.448177 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_marts'
+[0m20:55:10.455134 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:55:10.455134 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_staging'
+[0m20:55:10.455134 [debug] [ThreadPool]: On list_hello_public_marts: BEGIN
+[0m20:55:10.457142 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:55:10.457142 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:10.457142 [debug] [ThreadPool]: On list_hello_public_staging: BEGIN
+[0m20:55:10.457142 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:10.502300 [debug] [ThreadPool]: SQL status: BEGIN in 0.044 seconds
+[0m20:55:10.502300 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:55:10.504306 [debug] [ThreadPool]: On list_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_marts"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m20:55:10.508058 [debug] [ThreadPool]: SQL status: BEGIN in 0.050 seconds
+[0m20:55:10.508058 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:55:10.508058 [debug] [ThreadPool]: On list_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_staging"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m20:55:10.508058 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.009 seconds
+[0m20:55:10.508058 [debug] [ThreadPool]: On list_hello_public_marts: ROLLBACK
+[0m20:55:10.508058 [debug] [ThreadPool]: On list_hello_public_marts: Close
+[0m20:55:10.508058 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.008 seconds
+[0m20:55:10.508058 [debug] [ThreadPool]: On list_hello_public_staging: ROLLBACK
+[0m20:55:10.508058 [debug] [ThreadPool]: On list_hello_public_staging: Close
+[0m20:55:10.528526 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:10.528526 [debug] [MainThread]: On master: BEGIN
+[0m20:55:10.530050 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:55:10.561754 [debug] [MainThread]: SQL status: BEGIN in 0.040 seconds
+[0m20:55:10.561754 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:10.571471 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:55:10.582159 [debug] [MainThread]: SQL status: SELECT 1 in 0.011 seconds
+[0m20:55:10.582159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE235D0170>]}
+[0m20:55:10.582159 [debug] [MainThread]: On master: ROLLBACK
+[0m20:55:10.582159 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:10.582159 [debug] [MainThread]: On master: BEGIN
+[0m20:55:10.582159 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m20:55:10.587526 [debug] [MainThread]: On master: COMMIT
+[0m20:55:10.587526 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:10.587526 [debug] [MainThread]: On master: COMMIT
+[0m20:55:10.587526 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:55:10.587526 [debug] [MainThread]: On master: Close
+[0m20:55:10.595217 [debug] [Thread-1 (]: Began running node model.telegram_data_warehouse.dim_dates
+[0m20:55:10.595217 [debug] [Thread-2 (]: Began running node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:55:10.595217 [info ] [Thread-1 (]: 1 of 4 START sql table model public_marts.dim_dates ............................ [RUN]
+[0m20:55:10.595217 [info ] [Thread-2 (]: 2 of 4 START sql view model public_staging.stg_telegram_messages ............... [RUN]
+[0m20:55:10.595217 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.dim_dates'
+[0m20:55:10.595217 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.stg_telegram_messages'
+[0m20:55:10.595217 [debug] [Thread-1 (]: Began compiling node model.telegram_data_warehouse.dim_dates
+[0m20:55:10.595217 [debug] [Thread-2 (]: Began compiling node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:55:10.612952 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_data_warehouse.dim_dates"
+[0m20:55:10.641864 [debug] [Thread-2 (]: Writing injected SQL for node "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:55:10.654090 [debug] [Thread-2 (]: Began executing node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:55:10.654090 [debug] [Thread-1 (]: Began executing node model.telegram_data_warehouse.dim_dates
+[0m20:55:10.694318 [debug] [Thread-2 (]: Writing runtime sql for node "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:55:10.723167 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_data_warehouse.dim_dates"
+[0m20:55:10.723167 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:55:10.725245 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: BEGIN
+[0m20:55:10.725706 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:55:10.725706 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:55:10.727794 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: BEGIN
+[0m20:55:10.729325 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:55:10.768679 [debug] [Thread-2 (]: SQL status: BEGIN in 0.044 seconds
+[0m20:55:10.768679 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:55:10.771298 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+
+  create view "hello"."public_staging"."stg_telegram_messages__dbt_tmp"
+    
+    
+  as (
+    -- 
+
+-- -- Staging model to clean and extract fields from raw JSON data
+-- SELECT
+--     id AS message_id,
+--     channel_name,
+--     message_date::TIMESTAMP AS message_date,
+--     (message_data->>'text')::TEXT AS message_text,
+--     (message_data->>'sender_id')::BIGINT AS sender_id,
+--     (message_data->>'has_media')::BOOLEAN AS has_media,
+--     (message_data->>'media_type')::TEXT AS media_type,
+--     (message_data->>'media_path')::TEXT AS media_path,
+--     (message_data->>'caption')::TEXT AS caption,
+--     (message_data->>'is_reply')::BOOLEAN AS is_reply,
+--     (message_data->>'forwarded_from')::BIGINT AS forwarded_from,
+--     loaded_at
+-- FROM raw.telegram_messages
+
+
+
+
+
+-- Staging model to clean and extract fields from raw JSON data
+WITH numbered_messages AS (
+    SELECT
+        id AS message_id,
+        channel_name,
+        message_date::TIMESTAMP AS message_date,
+        (message_data->>'text')::TEXT AS message_text,
+        (message_data->>'sender_id')::BIGINT AS sender_id,
+        (message_data->>'has_media')::BOOLEAN AS has_media,
+        (message_data->>'media_type')::TEXT AS media_type,
+        (message_data->>'media_path')::TEXT AS media_path,
+        (message_data->>'caption')::TEXT AS caption,
+        (message_data->>'is_reply')::BOOLEAN AS is_reply,
+        (message_data->>'forwarded_from')::BIGINT AS forwarded_from,
+        loaded_at,
+        ROW_NUMBER() OVER (
+            PARTITION BY id, channel_name, message_date::DATE
+            ORDER BY loaded_at
+        ) AS row_num
+    FROM raw.telegram_messages
+)
+
+SELECT *
+FROM numbered_messages
+WHERE row_num = 1
+  );
+[0m20:55:10.772344 [debug] [Thread-1 (]: SQL status: BEGIN in 0.043 seconds
+[0m20:55:10.772344 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:55:10.772344 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_dates"} */
+
+  
+    
+
+  create  table "hello"."public_marts"."dim_dates__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Dimension table for time-based analysis
+WITH date_range AS (
+    SELECT generate_series(
+        '2025-01-01'::DATE,
+        '2025-12-31'::DATE,
+        INTERVAL '1 day'
+    ) AS date_day
+)
+SELECT
+    (EXTRACT(EPOCH FROM date_day)::BIGINT * 1000) AS date_id,
+    date_day,
+    EXTRACT(YEAR FROM date_day) AS year,
+    EXTRACT(MONTH FROM date_day) AS month,
+    EXTRACT(DAY FROM date_day) AS day,
+    EXTRACT(DOW FROM date_day) AS day_of_week,
+    EXTRACT(WEEK FROM date_day) AS week_of_year
+FROM date_range
+  );
+  
+[0m20:55:10.782387 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.009 seconds
+[0m20:55:10.788611 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:55:10.816608 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+alter table "hello"."public_staging"."stg_telegram_messages" rename to "stg_telegram_messages__dbt_backup"
+[0m20:55:10.816608 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:55:10.816608 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:55:10.816608 [debug] [Thread-1 (]: SQL status: SELECT 365 in 0.048 seconds
+[0m20:55:10.816608 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+alter table "hello"."public_staging"."stg_telegram_messages__dbt_tmp" rename to "stg_telegram_messages"
+[0m20:55:10.825384 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:55:10.825384 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_dates"} */
+alter table "hello"."public_marts"."dim_dates" rename to "dim_dates__dbt_backup"
+[0m20:55:10.825384 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:55:10.825384 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:55:10.840839 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: COMMIT
+[0m20:55:10.840839 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:55:10.840839 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:55:10.840839 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_dates"} */
+alter table "hello"."public_marts"."dim_dates__dbt_tmp" rename to "dim_dates"
+[0m20:55:10.840839 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: COMMIT
+[0m20:55:10.840839 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:55:10.840839 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: COMMIT
+[0m20:55:10.840839 [debug] [Thread-2 (]: SQL status: COMMIT in 0.003 seconds
+[0m20:55:10.840839 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:55:10.857010 [debug] [Thread-2 (]: Applying DROP to: "hello"."public_staging"."stg_telegram_messages__dbt_backup"
+[0m20:55:10.857010 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: COMMIT
+[0m20:55:10.857010 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:55:10.857010 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.stg_telegram_messages"} */
+drop view if exists "hello"."public_staging"."stg_telegram_messages__dbt_backup" cascade
+[0m20:55:10.857010 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m20:55:10.871464 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m20:55:10.873076 [debug] [Thread-1 (]: Applying DROP to: "hello"."public_marts"."dim_dates__dbt_backup"
+[0m20:55:10.873076 [debug] [Thread-2 (]: On model.telegram_data_warehouse.stg_telegram_messages: Close
+[0m20:55:10.873076 [debug] [Thread-1 (]: Using postgres connection "model.telegram_data_warehouse.dim_dates"
+[0m20:55:10.873076 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_dates"} */
+drop table if exists "hello"."public_marts"."dim_dates__dbt_backup" cascade
+[0m20:55:10.873076 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE23A04CB0>]}
+[0m20:55:10.873076 [info ] [Thread-2 (]: 2 of 4 OK created sql view model public_staging.stg_telegram_messages .......... [[32mCREATE VIEW[0m in 0.28s]
+[0m20:55:10.873076 [debug] [Thread-2 (]: Finished running node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:55:10.873076 [debug] [Thread-4 (]: Began running node model.telegram_data_warehouse.dim_channels
+[0m20:55:10.873076 [info ] [Thread-4 (]: 3 of 4 START sql table model public_marts.dim_channels ......................... [RUN]
+[0m20:55:10.888872 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.dim_channels'
+[0m20:55:10.888872 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.005 seconds
+[0m20:55:10.888872 [debug] [Thread-4 (]: Began compiling node model.telegram_data_warehouse.dim_channels
+[0m20:55:10.888872 [debug] [Thread-1 (]: On model.telegram_data_warehouse.dim_dates: Close
+[0m20:55:10.888872 [debug] [Thread-4 (]: Writing injected SQL for node "model.telegram_data_warehouse.dim_channels"
+[0m20:55:10.888872 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE23A1C050>]}
+[0m20:55:10.888872 [info ] [Thread-1 (]: 1 of 4 OK created sql table model public_marts.dim_dates ....................... [[32mSELECT 365[0m in 0.29s]
+[0m20:55:10.888872 [debug] [Thread-4 (]: Began executing node model.telegram_data_warehouse.dim_channels
+[0m20:55:10.899832 [debug] [Thread-1 (]: Finished running node model.telegram_data_warehouse.dim_dates
+[0m20:55:10.904112 [debug] [Thread-4 (]: Writing runtime sql for node "model.telegram_data_warehouse.dim_channels"
+[0m20:55:10.904112 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:55:10.904112 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: BEGIN
+[0m20:55:10.907898 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:55:10.943340 [debug] [Thread-4 (]: SQL status: BEGIN in 0.043 seconds
+[0m20:55:10.943340 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:55:10.943340 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_channels"} */
+
+  
+    
+
+  create  table "hello"."public_marts"."dim_channels__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Dimension table for Telegram channels
+WITH source AS (
+    SELECT DISTINCT channel_name
+    FROM "hello"."public_staging"."stg_telegram_messages"
+)
+SELECT
+    ROW_NUMBER() OVER () AS channel_id,
+    channel_name
+FROM source
+  );
+  
+[0m20:55:10.958664 [debug] [Thread-4 (]: SQL status: SELECT 2 in 0.007 seconds
+[0m20:55:10.958664 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:55:10.958664 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_channels"} */
+alter table "hello"."public_marts"."dim_channels" rename to "dim_channels__dbt_backup"
+[0m20:55:10.958664 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:55:10.965131 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:55:10.965131 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_channels"} */
+alter table "hello"."public_marts"."dim_channels__dbt_tmp" rename to "dim_channels"
+[0m20:55:10.965131 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:55:10.965131 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: COMMIT
+[0m20:55:10.965131 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:55:10.965131 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: COMMIT
+[0m20:55:10.971590 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:55:10.975740 [debug] [Thread-4 (]: Applying DROP to: "hello"."public_marts"."dim_channels__dbt_backup"
+[0m20:55:10.975740 [debug] [Thread-4 (]: Using postgres connection "model.telegram_data_warehouse.dim_channels"
+[0m20:55:10.975740 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.dim_channels"} */
+drop table if exists "hello"."public_marts"."dim_channels__dbt_backup" cascade
+[0m20:55:10.975740 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m20:55:10.981554 [debug] [Thread-4 (]: On model.telegram_data_warehouse.dim_channels: Close
+[0m20:55:10.981554 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE23AA0E60>]}
+[0m20:55:10.981554 [info ] [Thread-4 (]: 3 of 4 OK created sql table model public_marts.dim_channels .................... [[32mSELECT 2[0m in 0.09s]
+[0m20:55:10.981554 [debug] [Thread-4 (]: Finished running node model.telegram_data_warehouse.dim_channels
+[0m20:55:10.981554 [debug] [Thread-2 (]: Began running node model.telegram_data_warehouse.fct_messages
+[0m20:55:10.981554 [info ] [Thread-2 (]: 4 of 4 START sql table model public_marts.fct_messages ......................... [RUN]
+[0m20:55:10.981554 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.telegram_data_warehouse.stg_telegram_messages, now model.telegram_data_warehouse.fct_messages)
+[0m20:55:10.981554 [debug] [Thread-2 (]: Began compiling node model.telegram_data_warehouse.fct_messages
+[0m20:55:10.990093 [debug] [Thread-2 (]: Writing injected SQL for node "model.telegram_data_warehouse.fct_messages"
+[0m20:55:10.990093 [debug] [Thread-2 (]: Began executing node model.telegram_data_warehouse.fct_messages
+[0m20:55:10.990093 [debug] [Thread-2 (]: Writing runtime sql for node "model.telegram_data_warehouse.fct_messages"
+[0m20:55:10.990093 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:55:10.990093 [debug] [Thread-2 (]: On model.telegram_data_warehouse.fct_messages: BEGIN
+[0m20:55:10.990093 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:55:11.028779 [debug] [Thread-2 (]: SQL status: BEGIN in 0.042 seconds
+[0m20:55:11.028779 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:55:11.028779 [debug] [Thread-2 (]: On model.telegram_data_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.fct_messages"} */
+
+  
+    
+
+  create  table "hello"."public_marts"."fct_messages__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Fact table for Telegram messages, linking to dim_channels and dim_dates
+-- Contains metrics like message_length and supports analysis of visual content and trends
+WITH messages AS (
+    SELECT
+        m.message_id,
+        m.channel_name,
+        m.message_date,
+        m.message_text,
+        m.sender_id,
+        m.has_media,
+        m.media_type,
+        m.media_path,
+        m.caption,
+        m.is_reply,
+        m.forwarded_from,
+        LENGTH(COALESCE(m.message_text, '')) AS message_length,
+        c.channel_id,
+        (EXTRACT(EPOCH FROM m.message_date)::BIGINT * 1000) AS date_id
+    FROM "hello"."public_staging"."stg_telegram_messages" m
+    LEFT JOIN "hello"."public_marts"."dim_channels" c
+        ON m.channel_name = c.channel_name
+)
+SELECT
+    (channel_id || '-' || message_id || '-' || date_id)::TEXT AS message_key,
+    channel_id,
+    date_id,
+    message_id,
+    message_text,
+    sender_id,
+    has_media,
+    media_type,
+    media_path,
+    caption,
+    is_reply,
+    forwarded_from,
+    message_length
+FROM messages
+  );
+  
+[0m20:55:11.058553 [debug] [Thread-2 (]: SQL status: SELECT 200 in 0.020 seconds
+[0m20:55:11.058553 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:55:11.058553 [debug] [Thread-2 (]: On model.telegram_data_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.fct_messages"} */
+alter table "hello"."public_marts"."fct_messages" rename to "fct_messages__dbt_backup"
+[0m20:55:11.065802 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:55:11.065802 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:55:11.065802 [debug] [Thread-2 (]: On model.telegram_data_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.fct_messages"} */
+alter table "hello"."public_marts"."fct_messages__dbt_tmp" rename to "fct_messages"
+[0m20:55:11.065802 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:55:11.071862 [debug] [Thread-2 (]: On model.telegram_data_warehouse.fct_messages: COMMIT
+[0m20:55:11.073955 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:55:11.073955 [debug] [Thread-2 (]: On model.telegram_data_warehouse.fct_messages: COMMIT
+[0m20:55:11.075486 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:55:11.075486 [debug] [Thread-2 (]: Applying DROP to: "hello"."public_marts"."fct_messages__dbt_backup"
+[0m20:55:11.075486 [debug] [Thread-2 (]: Using postgres connection "model.telegram_data_warehouse.fct_messages"
+[0m20:55:11.075486 [debug] [Thread-2 (]: On model.telegram_data_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "model.telegram_data_warehouse.fct_messages"} */
+drop table if exists "hello"."public_marts"."fct_messages__dbt_backup" cascade
+[0m20:55:11.086280 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.006 seconds
+[0m20:55:11.088772 [debug] [Thread-2 (]: On model.telegram_data_warehouse.fct_messages: Close
+[0m20:55:11.088772 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5209659-0e4b-4aca-b054-7b0784631c5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE2368C860>]}
+[0m20:55:11.088772 [info ] [Thread-2 (]: 4 of 4 OK created sql table model public_marts.fct_messages .................... [[32mSELECT 200[0m in 0.11s]
+[0m20:55:11.090516 [debug] [Thread-2 (]: Finished running node model.telegram_data_warehouse.fct_messages
+[0m20:55:11.092232 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:11.092232 [debug] [MainThread]: On master: BEGIN
+[0m20:55:11.093954 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:55:11.126279 [debug] [MainThread]: SQL status: BEGIN in 0.041 seconds
+[0m20:55:11.126279 [debug] [MainThread]: On master: COMMIT
+[0m20:55:11.126279 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:11.137503 [debug] [MainThread]: On master: COMMIT
+[0m20:55:11.137503 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:55:11.137503 [debug] [MainThread]: On master: Close
+[0m20:55:11.137503 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:55:11.137503 [debug] [MainThread]: Connection 'list_hello' was properly closed.
+[0m20:55:11.137503 [debug] [MainThread]: Connection 'list_hello' was properly closed.
+[0m20:55:11.141049 [debug] [MainThread]: Connection 'list_hello_public_marts' was properly closed.
+[0m20:55:11.141966 [debug] [MainThread]: Connection 'list_hello_public_staging' was properly closed.
+[0m20:55:11.141966 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.dim_dates' was properly closed.
+[0m20:55:11.141966 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.fct_messages' was properly closed.
+[0m20:55:11.141966 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.dim_channels' was properly closed.
+[0m20:55:11.141966 [info ] [MainThread]: 
+[0m20:55:11.141966 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 0.86 seconds (0.86s).
+[0m20:55:11.145587 [debug] [MainThread]: Command end result
+[0m20:55:11.164960 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:55:11.174668 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:55:11.178306 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\HP ENVY\Desktop\weak7\dbt\target\run_results.json
+[0m20:55:11.178306 [info ] [MainThread]: 
+[0m20:55:11.178306 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:55:11.186389 [info ] [MainThread]: 
+[0m20:55:11.187058 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m20:55:11.187058 [debug] [MainThread]: Command `dbt run` succeeded at 20:55:11.187058 after 1.84 seconds
+[0m20:55:11.187058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE210CA1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE21582CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE210E86B0>]}
+[0m20:55:11.187058 [debug] [MainThread]: Flushing usage events
+[0m20:55:12.455870 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:55:18.040264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E53F91F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E4933B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E4888950>]}
+
+
+============================== 20:55:18.040264 | 547cba54-295a-44d8-a4a3-65c27f99360d ==============================
+[0m20:55:18.040264 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:55:18.040264 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt test', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:55:18.247003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '547cba54-295a-44d8-a4a3-65c27f99360d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E55B9BB0>]}
+[0m20:55:18.317483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '547cba54-295a-44d8-a4a3-65c27f99360d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E6676150>]}
+[0m20:55:18.319490 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:55:18.525335 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m20:55:18.644746 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:55:18.646410 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:55:18.676197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '547cba54-295a-44d8-a4a3-65c27f99360d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E681AFF0>]}
+[0m20:55:18.747978 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:55:18.747978 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:55:18.795844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '547cba54-295a-44d8-a4a3-65c27f99360d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E6E9A5D0>]}
+[0m20:55:18.795844 [info ] [MainThread]: Found 4 models, 1 test, 433 macros
+[0m20:55:18.795844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '547cba54-295a-44d8-a4a3-65c27f99360d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E6A888C0>]}
+[0m20:55:18.795844 [info ] [MainThread]: 
+[0m20:55:18.795844 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:55:18.808689 [info ] [MainThread]: 
+[0m20:55:18.810211 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:55:18.818805 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_marts'
+[0m20:55:18.818805 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_staging'
+[0m20:55:18.899196 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:55:18.900270 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:55:18.900270 [debug] [ThreadPool]: On list_hello_public_marts: BEGIN
+[0m20:55:18.900270 [debug] [ThreadPool]: On list_hello_public_staging: BEGIN
+[0m20:55:18.900270 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:18.900270 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:18.948728 [debug] [ThreadPool]: SQL status: BEGIN in 0.046 seconds
+[0m20:55:18.948728 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:55:18.948728 [debug] [ThreadPool]: On list_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_marts"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m20:55:18.950736 [debug] [ThreadPool]: SQL status: BEGIN in 0.051 seconds
+[0m20:55:18.950736 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:55:18.956093 [debug] [ThreadPool]: On list_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_staging"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m20:55:18.956093 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.006 seconds
+[0m20:55:18.956093 [debug] [ThreadPool]: On list_hello_public_marts: ROLLBACK
+[0m20:55:18.956093 [debug] [ThreadPool]: On list_hello_public_marts: Close
+[0m20:55:18.963759 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.008 seconds
+[0m20:55:18.963759 [debug] [ThreadPool]: On list_hello_public_staging: ROLLBACK
+[0m20:55:18.966567 [debug] [ThreadPool]: On list_hello_public_staging: Close
+[0m20:55:18.966567 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:18.966567 [debug] [MainThread]: On master: BEGIN
+[0m20:55:18.966567 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:55:19.011068 [debug] [MainThread]: SQL status: BEGIN in 0.038 seconds
+[0m20:55:19.011068 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:19.011068 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:55:19.011068 [debug] [MainThread]: SQL status: SELECT 1 in 0.010 seconds
+[0m20:55:19.011068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '547cba54-295a-44d8-a4a3-65c27f99360d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E259C3B0>]}
+[0m20:55:19.011068 [debug] [MainThread]: On master: ROLLBACK
+[0m20:55:19.011068 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:19.011068 [debug] [MainThread]: On master: BEGIN
+[0m20:55:19.027029 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m20:55:19.027029 [debug] [MainThread]: On master: COMMIT
+[0m20:55:19.027029 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:19.027029 [debug] [MainThread]: On master: COMMIT
+[0m20:55:19.027029 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:55:19.027029 [debug] [MainThread]: On master: Close
+[0m20:55:19.027029 [debug] [Thread-1 (]: Began running node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:55:19.027029 [info ] [Thread-1 (]: 1 of 1 START test no_duplicate_messages ........................................ [RUN]
+[0m20:55:19.027029 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.telegram_data_warehouse.no_duplicate_messages'
+[0m20:55:19.027029 [debug] [Thread-1 (]: Began compiling node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:55:19.045216 [debug] [Thread-1 (]: Writing injected SQL for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:55:19.047999 [debug] [Thread-1 (]: Began executing node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:55:19.061287 [debug] [Thread-1 (]: Writing runtime sql for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:55:19.061287 [debug] [Thread-1 (]: Using postgres connection "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:55:19.061287 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: BEGIN
+[0m20:55:19.061287 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:55:19.109231 [debug] [Thread-1 (]: SQL status: BEGIN in 0.041 seconds
+[0m20:55:19.109231 [debug] [Thread-1 (]: Using postgres connection "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:55:19.109231 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "test.telegram_data_warehouse.no_duplicate_messages"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Custom test to ensure no duplicate messages per channel and date
+SELECT
+    message_id,
+    channel_name,
+    message_date::DATE,
+    COUNT(*) AS cnt
+FROM "hello"."public_staging"."stg_telegram_messages"
+GROUP BY message_id, channel_name, message_date::DATE
+HAVING COUNT(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+[0m20:55:19.111267 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m20:55:19.117627 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: ROLLBACK
+[0m20:55:19.117627 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: Close
+[0m20:55:19.117627 [info ] [Thread-1 (]: 1 of 1 PASS no_duplicate_messages .............................................. [[32mPASS[0m in 0.09s]
+[0m20:55:19.117627 [debug] [Thread-1 (]: Finished running node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:55:19.121345 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:19.121345 [debug] [MainThread]: On master: BEGIN
+[0m20:55:19.121345 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:55:19.165458 [debug] [MainThread]: SQL status: BEGIN in 0.042 seconds
+[0m20:55:19.165458 [debug] [MainThread]: On master: COMMIT
+[0m20:55:19.165458 [debug] [MainThread]: Using postgres connection "master"
+[0m20:55:19.165458 [debug] [MainThread]: On master: COMMIT
+[0m20:55:19.165458 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:55:19.165458 [debug] [MainThread]: On master: Close
+[0m20:55:19.165458 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:55:19.165458 [debug] [MainThread]: Connection 'list_hello_public_marts' was properly closed.
+[0m20:55:19.165458 [debug] [MainThread]: Connection 'list_hello_public_staging' was properly closed.
+[0m20:55:19.165458 [debug] [MainThread]: Connection 'test.telegram_data_warehouse.no_duplicate_messages' was properly closed.
+[0m20:55:19.171177 [info ] [MainThread]: 
+[0m20:55:19.171177 [info ] [MainThread]: Finished running 1 test in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m20:55:19.171177 [debug] [MainThread]: Command end result
+[0m20:55:19.182073 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:55:19.189981 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:55:19.197170 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\HP ENVY\Desktop\weak7\dbt\target\run_results.json
+[0m20:55:19.197170 [info ] [MainThread]: 
+[0m20:55:19.197170 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:55:19.197170 [info ] [MainThread]: 
+[0m20:55:19.197170 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m20:55:19.197170 [debug] [MainThread]: Command `dbt test` succeeded at 20:55:19.197170 after 1.32 seconds
+[0m20:55:19.197170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E4888950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E4F89790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196E4F88110>]}
+[0m20:55:19.197170 [debug] [MainThread]: Flushing usage events
+[0m20:55:20.437544 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:56:20.442214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A7FDB320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A65516A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A88EA480>]}
+
+
+============================== 20:56:20.458155 | 2724ca82-dba1-4056-a833-4218925f29d3 ==============================
+[0m20:56:20.458155 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:56:20.458155 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt docs generate', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:56:20.658424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2724ca82-dba1-4056-a833-4218925f29d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A9D97260>]}
+[0m20:56:20.720263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2724ca82-dba1-4056-a833-4218925f29d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227AA0DE660>]}
+[0m20:56:20.720263 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:56:20.935596 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m20:56:21.092957 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:56:21.092957 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:56:21.108890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2724ca82-dba1-4056-a833-4218925f29d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A89CA5A0>]}
+[0m20:56:21.205343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2724ca82-dba1-4056-a833-4218925f29d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227AA534770>]}
+[0m20:56:21.205343 [info ] [MainThread]: Found 4 models, 1 test, 433 macros
+[0m20:56:21.205343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2724ca82-dba1-4056-a833-4218925f29d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A8CA0A70>]}
+[0m20:56:21.213410 [info ] [MainThread]: 
+[0m20:56:21.213410 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:56:21.213410 [info ] [MainThread]: 
+[0m20:56:21.213410 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:56:21.222757 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_marts'
+[0m20:56:21.225043 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_staging'
+[0m20:56:21.287067 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:56:21.287067 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:56:21.292845 [debug] [ThreadPool]: On list_hello_public_marts: BEGIN
+[0m20:56:21.293302 [debug] [ThreadPool]: On list_hello_public_staging: BEGIN
+[0m20:56:21.293806 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:56:21.294262 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:56:21.340416 [debug] [ThreadPool]: SQL status: BEGIN in 0.047 seconds
+[0m20:56:21.341958 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m20:56:21.341958 [debug] [ThreadPool]: On list_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_staging"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m20:56:21.341958 [debug] [ThreadPool]: SQL status: BEGIN in 0.049 seconds
+[0m20:56:21.343490 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m20:56:21.343490 [debug] [ThreadPool]: On list_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_marts"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m20:56:21.349658 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.007 seconds
+[0m20:56:21.349658 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.006 seconds
+[0m20:56:21.351246 [debug] [ThreadPool]: On list_hello_public_staging: ROLLBACK
+[0m20:56:21.352775 [debug] [ThreadPool]: On list_hello_public_marts: ROLLBACK
+[0m20:56:21.352775 [debug] [ThreadPool]: On list_hello_public_staging: Close
+[0m20:56:21.354303 [debug] [ThreadPool]: On list_hello_public_marts: Close
+[0m20:56:21.360044 [debug] [MainThread]: Using postgres connection "master"
+[0m20:56:21.360044 [debug] [MainThread]: On master: BEGIN
+[0m20:56:21.360044 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:56:21.392554 [debug] [MainThread]: SQL status: BEGIN in 0.034 seconds
+[0m20:56:21.392554 [debug] [MainThread]: Using postgres connection "master"
+[0m20:56:21.392554 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:56:21.392554 [debug] [MainThread]: SQL status: SELECT 1 in 0.007 seconds
+[0m20:56:21.392554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2724ca82-dba1-4056-a833-4218925f29d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A9D94F80>]}
+[0m20:56:21.406483 [debug] [MainThread]: On master: ROLLBACK
+[0m20:56:21.406483 [debug] [MainThread]: On master: Close
+[0m20:56:21.410299 [debug] [Thread-1 (]: Began running node model.telegram_data_warehouse.dim_dates
+[0m20:56:21.410299 [debug] [Thread-2 (]: Began running node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:56:21.410299 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.dim_dates'
+[0m20:56:21.410299 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.stg_telegram_messages'
+[0m20:56:21.410299 [debug] [Thread-1 (]: Began compiling node model.telegram_data_warehouse.dim_dates
+[0m20:56:21.410299 [debug] [Thread-2 (]: Began compiling node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:56:21.420524 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_data_warehouse.dim_dates"
+[0m20:56:21.424266 [debug] [Thread-2 (]: Writing injected SQL for node "model.telegram_data_warehouse.stg_telegram_messages"
+[0m20:56:21.424266 [debug] [Thread-1 (]: Began executing node model.telegram_data_warehouse.dim_dates
+[0m20:56:21.427359 [debug] [Thread-1 (]: Finished running node model.telegram_data_warehouse.dim_dates
+[0m20:56:21.427359 [debug] [Thread-2 (]: Began executing node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:56:21.427359 [debug] [Thread-2 (]: Finished running node model.telegram_data_warehouse.stg_telegram_messages
+[0m20:56:21.427359 [debug] [Thread-4 (]: Began running node model.telegram_data_warehouse.dim_channels
+[0m20:56:21.427359 [debug] [Thread-3 (]: Began running node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:56:21.427359 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.telegram_data_warehouse.dim_channels'
+[0m20:56:21.427359 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.telegram_data_warehouse.no_duplicate_messages'
+[0m20:56:21.427359 [debug] [Thread-4 (]: Began compiling node model.telegram_data_warehouse.dim_channels
+[0m20:56:21.427359 [debug] [Thread-3 (]: Began compiling node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:56:21.436619 [debug] [Thread-4 (]: Writing injected SQL for node "model.telegram_data_warehouse.dim_channels"
+[0m20:56:21.438364 [debug] [Thread-3 (]: Writing injected SQL for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m20:56:21.438364 [debug] [Thread-4 (]: Began executing node model.telegram_data_warehouse.dim_channels
+[0m20:56:21.441625 [debug] [Thread-4 (]: Finished running node model.telegram_data_warehouse.dim_channels
+[0m20:56:21.441625 [debug] [Thread-3 (]: Began executing node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:56:21.441625 [debug] [Thread-2 (]: Began running node model.telegram_data_warehouse.fct_messages
+[0m20:56:21.441625 [debug] [Thread-3 (]: Finished running node test.telegram_data_warehouse.no_duplicate_messages
+[0m20:56:21.441625 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.telegram_data_warehouse.stg_telegram_messages, now model.telegram_data_warehouse.fct_messages)
+[0m20:56:21.441625 [debug] [Thread-2 (]: Began compiling node model.telegram_data_warehouse.fct_messages
+[0m20:56:21.447349 [debug] [Thread-2 (]: Writing injected SQL for node "model.telegram_data_warehouse.fct_messages"
+[0m20:56:21.449355 [debug] [Thread-2 (]: Began executing node model.telegram_data_warehouse.fct_messages
+[0m20:56:21.449355 [debug] [Thread-2 (]: Finished running node model.telegram_data_warehouse.fct_messages
+[0m20:56:21.449355 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:56:21.449355 [debug] [MainThread]: Connection 'list_hello_public_marts' was properly closed.
+[0m20:56:21.449355 [debug] [MainThread]: Connection 'list_hello_public_staging' was properly closed.
+[0m20:56:21.449355 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.dim_dates' was properly closed.
+[0m20:56:21.449355 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.fct_messages' was properly closed.
+[0m20:56:21.452753 [debug] [MainThread]: Connection 'model.telegram_data_warehouse.dim_channels' was properly closed.
+[0m20:56:21.452753 [debug] [MainThread]: Connection 'test.telegram_data_warehouse.no_duplicate_messages' was properly closed.
+[0m20:56:21.454259 [debug] [MainThread]: Command end result
+[0m20:56:21.509369 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:56:21.519202 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:56:21.521524 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\HP ENVY\Desktop\weak7\dbt\target\run_results.json
+[0m20:56:22.163464 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m20:56:22.174854 [info ] [MainThread]: Building catalog
+[0m20:56:22.174854 [debug] [ThreadPool]: Acquiring new postgres connection 'hello.information_schema'
+[0m20:56:22.196231 [debug] [ThreadPool]: Using postgres connection "hello.information_schema"
+[0m20:56:22.196231 [debug] [ThreadPool]: On hello.information_schema: BEGIN
+[0m20:56:22.196231 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:56:22.288136 [debug] [ThreadPool]: SQL status: BEGIN in 0.090 seconds
+[0m20:56:22.290142 [debug] [ThreadPool]: Using postgres connection "hello.information_schema"
+[0m20:56:22.290142 [debug] [ThreadPool]: On hello.information_schema: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "hello.information_schema"} */
+
+    
+    
+
+    select
+        'hello' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public_marts') and
+           upper(tbl.relname) = upper('fct_messages')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_telegram_messages')) or (upper(sch.nspname) = upper('public_marts') and
+           upper(tbl.relname) = upper('dim_dates')) or (upper(sch.nspname) = upper('public_marts') and
+           upper(tbl.relname) = upper('dim_channels')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m20:56:22.334922 [debug] [ThreadPool]: SQL status: SELECT 35 in 0.050 seconds
+[0m20:56:22.343516 [debug] [ThreadPool]: On hello.information_schema: ROLLBACK
+[0m20:56:22.343516 [debug] [ThreadPool]: On hello.information_schema: Close
+[0m20:56:22.350899 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\Users\HP ENVY\Desktop\weak7\dbt\target\catalog.json
+[0m20:56:22.366849 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m20:56:22.366849 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m20:56:22.366849 [info ] [MainThread]: Catalog written to C:\Users\HP ENVY\Desktop\weak7\dbt\target\catalog.json
+[0m20:56:22.366849 [debug] [MainThread]: Command `dbt docs generate` succeeded at 20:56:22.366849 after 2.09 seconds
+[0m20:56:22.366849 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m20:56:22.366849 [debug] [MainThread]: Connection 'hello.information_schema' was properly closed.
+[0m20:56:22.366849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A2677E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A7FF8230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227AA215790>]}
+[0m20:56:22.366849 [debug] [MainThread]: Flushing usage events
+[0m20:56:23.717542 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:56:36.700926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016202306F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016202525FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016201BCE570>]}
+
+
+============================== 20:56:36.703049 | fed5aaaf-9945-4d07-9730-f658af852a97 ==============================
+[0m20:56:36.703049 [info ] [MainThread]: Running with dbt=1.10.4
+[0m20:56:36.703049 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt docs serve', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:56:36.905383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fed5aaaf-9945-4d07-9730-f658af852a97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016202BAF080>]}
+[0m20:56:36.964705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fed5aaaf-9945-4d07-9730-f658af852a97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016203F6DAC0>]}
+[0m21:00:06.838216 [error] [MainThread]: Encountered an error:
+
+[0m21:00:06.911064 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\HP ENVY\Desktop\weak7\myenv\Lib\site-packages\dbt\cli\requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP ENVY\Desktop\weak7\myenv\Lib\site-packages\dbt\cli\requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP ENVY\Desktop\weak7\myenv\Lib\site-packages\dbt\cli\requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP ENVY\Desktop\weak7\myenv\Lib\site-packages\dbt\cli\requires.py", line 285, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP ENVY\Desktop\weak7\myenv\Lib\site-packages\dbt\cli\requires.py", line 332, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP ENVY\Desktop\weak7\myenv\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\HP ENVY\Desktop\weak7\myenv\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Python312\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m21:00:06.911064 [debug] [MainThread]: Command `dbt docs serve` failed at 21:00:06.911064 after 210.38 seconds
+[0m21:00:06.911064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162023DA7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162029A95B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016203C47A70>]}
+[0m21:00:06.927140 [debug] [MainThread]: Flushing usage events
+[0m21:00:08.184863 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:00:16.058909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEE7E9880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEE567F80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEEA6CB00>]}
+
+
+============================== 21:00:16.062986 | 9f1569b9-1ee6-4ae9-94a9-057250abb5c7 ==============================
+[0m21:00:16.062986 [info ] [MainThread]: Running with dbt=1.10.4
+[0m21:00:16.062986 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\HP ENVY\\Desktop\\weak7\\dbt\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt test', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:00:16.255852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9f1569b9-1ee6-4ae9-94a9-057250abb5c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEBCEE900>]}
+[0m21:00:16.322713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9f1569b9-1ee6-4ae9-94a9-057250abb5c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEFEA5FD0>]}
+[0m21:00:16.324720 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m21:00:16.550056 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m21:00:16.678047 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:00:16.678047 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:00:16.709374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9f1569b9-1ee6-4ae9-94a9-057250abb5c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BF02F5D60>]}
+[0m21:00:16.764726 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m21:00:16.766732 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m21:00:16.803434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9f1569b9-1ee6-4ae9-94a9-057250abb5c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BF06D67E0>]}
+[0m21:00:16.803434 [info ] [MainThread]: Found 4 models, 1 test, 433 macros
+[0m21:00:16.803434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9f1569b9-1ee6-4ae9-94a9-057250abb5c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEEDE9190>]}
+[0m21:00:16.814614 [info ] [MainThread]: 
+[0m21:00:16.814614 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:00:16.814614 [info ] [MainThread]: 
+[0m21:00:16.814614 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:00:16.821449 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_marts'
+[0m21:00:16.835836 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hello_public_staging'
+[0m21:00:16.906576 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m21:00:16.906576 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m21:00:16.915066 [debug] [ThreadPool]: On list_hello_public_marts: BEGIN
+[0m21:00:16.915745 [debug] [ThreadPool]: On list_hello_public_staging: BEGIN
+[0m21:00:16.916473 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:00:16.916473 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:00:16.955318 [debug] [ThreadPool]: SQL status: BEGIN in 0.054 seconds
+[0m21:00:16.971126 [debug] [ThreadPool]: Using postgres connection "list_hello_public_marts"
+[0m21:00:16.974574 [debug] [ThreadPool]: On list_hello_public_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_marts"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m21:00:16.981226 [debug] [ThreadPool]: SQL status: BEGIN in 0.065 seconds
+[0m21:00:16.982894 [debug] [ThreadPool]: Using postgres connection "list_hello_public_staging"
+[0m21:00:16.982894 [debug] [ThreadPool]: On list_hello_public_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "list_hello_public_staging"} */
+select
+      'hello' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'hello' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m21:00:16.982894 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.008 seconds
+[0m21:00:16.986189 [debug] [ThreadPool]: On list_hello_public_marts: ROLLBACK
+[0m21:00:16.986189 [debug] [ThreadPool]: On list_hello_public_marts: Close
+[0m21:00:16.991175 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.007 seconds
+[0m21:00:16.992926 [debug] [ThreadPool]: On list_hello_public_staging: ROLLBACK
+[0m21:00:16.992926 [debug] [ThreadPool]: On list_hello_public_staging: Close
+[0m21:00:16.998080 [debug] [MainThread]: Using postgres connection "master"
+[0m21:00:16.999729 [debug] [MainThread]: On master: BEGIN
+[0m21:00:16.999729 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:00:17.035040 [debug] [MainThread]: SQL status: BEGIN in 0.039 seconds
+[0m21:00:17.035040 [debug] [MainThread]: Using postgres connection "master"
+[0m21:00:17.035040 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:00:17.050849 [debug] [MainThread]: SQL status: SELECT 1 in 0.010 seconds
+[0m21:00:17.050849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9f1569b9-1ee6-4ae9-94a9-057250abb5c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BF020D520>]}
+[0m21:00:17.050849 [debug] [MainThread]: On master: ROLLBACK
+[0m21:00:17.050849 [debug] [MainThread]: Using postgres connection "master"
+[0m21:00:17.050849 [debug] [MainThread]: On master: BEGIN
+[0m21:00:17.050849 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m21:00:17.050849 [debug] [MainThread]: On master: COMMIT
+[0m21:00:17.050849 [debug] [MainThread]: Using postgres connection "master"
+[0m21:00:17.050849 [debug] [MainThread]: On master: COMMIT
+[0m21:00:17.050849 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m21:00:17.050849 [debug] [MainThread]: On master: Close
+[0m21:00:17.050849 [debug] [Thread-1 (]: Began running node test.telegram_data_warehouse.no_duplicate_messages
+[0m21:00:17.050849 [info ] [Thread-1 (]: 1 of 1 START test no_duplicate_messages ........................................ [RUN]
+[0m21:00:17.050849 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.telegram_data_warehouse.no_duplicate_messages'
+[0m21:00:17.050849 [debug] [Thread-1 (]: Began compiling node test.telegram_data_warehouse.no_duplicate_messages
+[0m21:00:17.066658 [debug] [Thread-1 (]: Writing injected SQL for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m21:00:17.066658 [debug] [Thread-1 (]: Began executing node test.telegram_data_warehouse.no_duplicate_messages
+[0m21:00:17.088064 [debug] [Thread-1 (]: Writing runtime sql for node "test.telegram_data_warehouse.no_duplicate_messages"
+[0m21:00:17.088064 [debug] [Thread-1 (]: Using postgres connection "test.telegram_data_warehouse.no_duplicate_messages"
+[0m21:00:17.088064 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: BEGIN
+[0m21:00:17.088064 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:00:17.134894 [debug] [Thread-1 (]: SQL status: BEGIN in 0.038 seconds
+[0m21:00:17.134894 [debug] [Thread-1 (]: Using postgres connection "test.telegram_data_warehouse.no_duplicate_messages"
+[0m21:00:17.134894 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_data_warehouse", "target_name": "dev", "node_id": "test.telegram_data_warehouse.no_duplicate_messages"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Custom test to ensure no duplicate messages per channel and date
+SELECT
+    message_id,
+    channel_name,
+    message_date::DATE,
+    COUNT(*) AS cnt
+FROM "hello"."public_staging"."stg_telegram_messages"
+GROUP BY message_id, channel_name, message_date::DATE
+HAVING COUNT(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+[0m21:00:17.139236 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m21:00:17.139236 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: ROLLBACK
+[0m21:00:17.139236 [debug] [Thread-1 (]: On test.telegram_data_warehouse.no_duplicate_messages: Close
+[0m21:00:17.139236 [info ] [Thread-1 (]: 1 of 1 PASS no_duplicate_messages .............................................. [[32mPASS[0m in 0.09s]
+[0m21:00:17.139236 [debug] [Thread-1 (]: Finished running node test.telegram_data_warehouse.no_duplicate_messages
+[0m21:00:17.147521 [debug] [MainThread]: Using postgres connection "master"
+[0m21:00:17.147521 [debug] [MainThread]: On master: BEGIN
+[0m21:00:17.147521 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:00:17.188649 [debug] [MainThread]: SQL status: BEGIN in 0.039 seconds
+[0m21:00:17.188649 [debug] [MainThread]: On master: COMMIT
+[0m21:00:17.188649 [debug] [MainThread]: Using postgres connection "master"
+[0m21:00:17.188649 [debug] [MainThread]: On master: COMMIT
+[0m21:00:17.188649 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m21:00:17.188649 [debug] [MainThread]: On master: Close
+[0m21:00:17.188649 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:00:17.188649 [debug] [MainThread]: Connection 'list_hello_public_marts' was properly closed.
+[0m21:00:17.188649 [debug] [MainThread]: Connection 'list_hello_public_staging' was properly closed.
+[0m21:00:17.188649 [debug] [MainThread]: Connection 'test.telegram_data_warehouse.no_duplicate_messages' was properly closed.
+[0m21:00:17.188649 [info ] [MainThread]: 
+[0m21:00:17.188649 [info ] [MainThread]: Finished running 1 test in 0 hours 0 minutes and 0.37 seconds (0.37s).
+[0m21:00:17.188649 [debug] [MainThread]: Command end result
+[0m21:00:17.209802 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\manifest.json
+[0m21:00:17.209802 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\HP ENVY\Desktop\weak7\dbt\target\semantic_manifest.json
+[0m21:00:17.223547 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\HP ENVY\Desktop\weak7\dbt\target\run_results.json
+[0m21:00:17.223547 [info ] [MainThread]: 
+[0m21:00:17.223547 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:00:17.226657 [info ] [MainThread]: 
+[0m21:00:17.226657 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m21:00:17.226657 [debug] [MainThread]: Command `dbt test` succeeded at 21:00:17.226657 after 1.33 seconds
+[0m21:00:17.226657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEE567F80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEEC63110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEEC610D0>]}
+[0m21:00:17.226657 [debug] [MainThread]: Flushing usage events
+[0m21:00:18.381890 [debug] [MainThread]: An error was encountered while trying to flush usage events

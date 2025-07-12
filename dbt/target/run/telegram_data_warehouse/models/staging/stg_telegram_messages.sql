@@ -1,4 +1,9 @@
--- {{ config(materialized='view', schema='staging') }}
+
+  create view "hello"."public_staging"."stg_telegram_messages__dbt_tmp"
+    
+    
+  as (
+    -- 
 
 -- -- Staging model to clean and extract fields from raw JSON data
 -- SELECT
@@ -18,7 +23,7 @@
 
 
 
-{{ config(materialized='view', schema='staging') }}
+
 
 -- Staging model to clean and extract fields from raw JSON data
 WITH numbered_messages AS (
@@ -45,3 +50,4 @@ WITH numbered_messages AS (
 SELECT *
 FROM numbered_messages
 WHERE row_num = 1
+  );
