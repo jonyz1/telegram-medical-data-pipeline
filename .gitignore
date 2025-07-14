@@ -18,5 +18,9 @@ myenv/
 
 pycache/ 
 *.pyc 
-dbt/target/ 
-dbt/dbt_packages/
+# dbt/target/ 
+# dbt/dbt_packages/
+
+
+*.pt 
+yolo_cache/

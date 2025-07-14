@@ -1,0 +1,144 @@
+name: Telegram Medical Data Pipeline CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci-pipeline:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: telegram_data_warehouse
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create .env file
+        run: |
+          echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env
+          echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env
+          echo "POSTGRES_DB=telegram_data_warehouse" >> .env
+          echo "POSTGRES_HOST=localhost" >> .env
+          echo "POSTGRES_PORT=5432" >> .env
+        env:
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+
+      - name: Create sample JSON data
+        run: |
+          mkdir -p data/raw/telegram_messages/2025-07-12/Chemed
+          echo '[
+            {
+              "id": 12345,
+              "date": "2025-07-12T20:10:00+00:00",
+              "text": "Paracetamol available",
+              "sender_id": 67890,
+              "has_media": true,
+              "media_type": "photo",
+              "media_path": "data/raw/images/Chemed/2025-07-12/12345.jpg",
+              "caption": "Sample antibiotic photo",
+              "is_reply": false,
+              "forwarded_from": null
+            }
+          ]' > data/raw/telegram_messages/2025-07-12/Chemed/messages.json
+
+      - name: Create sample image
+        run: |
+          mkdir -p data/raw/images/Chemed/2025-07-12
+          echo "Dummy image content" > data/raw/images/Chemed/2025-07-12/12345.jpg
+
+      - name: Load data into PostgreSQL
+        run: python app/loading/load_raw_data.py
+
+      - name: Process images with YOLO
+        run: python app/processing/process_images_yolo.py
+
+      - name: Run dbt models
+        run: |
+          cd dbt
+          dbt run
+        env:
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: telegram_data_warehouse
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+
+      - name: Run dbt tests
+        run: |
+          cd dbt
+          dbt test
+        env:
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: telegram_data_warehouse
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+
+      - name: Test FastAPI endpoints
+        run: |
+          # Start FastAPI server in the background
+          uvicorn app.api.main:app --host 0.0.0.0 --port 8000 &
+          sleep 5  # Wait for server to start
+          # Test top-products endpoint
+          curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/api/reports/top-products?limit=10
+          echo "Top products endpoint tested"
+          # Test channel activity endpoint
+          curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/api/channels/Chemed/activity
+          echo "Channel activity endpoint tested"
+          # Test search messages endpoint
+          curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/api/search/messages?query=paracetamol
+          echo "Search messages endpoint tested"
+          # Stop the server
+          pkill -f uvicorn
+        env:
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: telegram_data_warehouse
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+
+      - name: Generate dbt documentation
+        run: |
+          cd dbt
+          dbt docs generate
+        env:
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: telegram_data_warehouse
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+
+      - name: Archive dbt documentation
+        uses: actions/upload-artifact@v4
+        with:
+          name: dbt-docs
+          path: dbt/target/
